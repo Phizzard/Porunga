@@ -2,19 +2,31 @@
   "name": "cbc-ui-ts",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
+  "devDependencies": {
+    "@emotion/core": "^10.0.22",
+    "@emotion/styled": "^10.0.23",
     "@types/jest": "24.0.23",
     "@types/node": "12.12.14",
     "@types/react": "16.9.13",
     "@types/react-dom": "16.9.4",
+    "emotion-theming": "^10.0.19",
+    "path": "^0.12.7",
     "react": "^16.12.0",
+    "react-docgen-typescript": "^1.16.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.2.0",
+    "react-styleguidist": "^10.2.1",
     "typescript": "3.7.2"
   },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.22",
+    "@emotion/styled": "^10.0.23",
+    "emotion-theming": "^10.0.19",
+    "react": "^16.12.0"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "styleguidist server",
+    "build": "styleguidist build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
