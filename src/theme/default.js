@@ -1,5 +1,5 @@
 const defaultTheme = {
-  primaryColor: "red"
+  primaryColor: 'red',
 }
 
-export default defaultTheme;
+export default defaultTheme
