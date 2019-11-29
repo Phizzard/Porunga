@@ -1,6 +1,9 @@
-# CBC UI
-
-![image]("./../images/building-blocks.png")
+<p align="center">
+    <img alt="CBC UI" src="./images/building-blocks.svg" width="200" />
+</p>
+<h1 align="center">
+  CBC UI
+</h1>
 
 ## Introduction
 CBC UI is an experimental library of presentational components to be used across applications using ReactJS. It is intended to work as building blocks.
