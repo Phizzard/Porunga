@@ -5,17 +5,15 @@ import { Container } from "./style";
  * Button properties
  */
 export interface IButtonProps {
-  /** children description */
-  children?: React.ReactNode;
-  /** className description */
-  className: string;
+  /** Content inside the button element */
+  children: React.ReactNode;
 };
 
 /**
  * Button
  */
-export const Button = ({ children, className }: IButtonProps) => (
-  <Container className={className}>{children}</Container>
+export const Button = ({ children }: IButtonProps) => (
+  <Container>{children}</Container>
 )
 
 export default Button;

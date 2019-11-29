@@ -8,9 +8,10 @@ type ButtonProps = {
 
 export const Container = styled.button`
   color: ${(props: ButtonProps) => props && props.theme && props.theme.primaryColor};
-  padding: .75rem 1.25rem;
-  font-size: 1rem;
-  border: 2px solid ${(props: ButtonProps) => props && props.theme && props.theme.primaryColor};
+  padding: .6rem 1.1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: 3px solid ${(props: ButtonProps) => props && props.theme && props.theme.primaryColor};
   border-radius: 24px;
   cursor: pointer;
   background-color: #f7fafc;
