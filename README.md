@@ -15,12 +15,13 @@ This is a 2019 innovation sprint project that can either take off to be implemen
 
 ## Tools Used
 
-- Emotion Styled
-- Emotion Theming
-- TypeScript
-- Style Guidist
-- Commitzen
-- Snapshot Testing
+- [Emotion Styled](https://emotion.sh/docs/introduction)
+  - Styled API
+  - Themeing
+- [TypeScript](https://www.typescriptlang.org/)
+- [Style Guidist](https://react-styleguidist.js.org/)
+- [Commitzen](https://commitizen.github.io/cz-cli/)
+- [Snapshot Testing](https://jestjs.io/docs/en/snapshot-testing)
 
 ## 🏃 Get Running
 
@@ -34,7 +35,7 @@ install packages running
 
 run local playground
 
-`npm start`
+`yarn start`
 
 ## 👔 Conventional Commits
 
@@ -51,6 +52,10 @@ This project uses [Commitizen](https://github.com/commitizen/cz-cli) to generate
 - Whether it produces any breaking changes
 - Whether it closes any open issues
 
-## Todo List
+## Project Roadmap
 
-- [ ] Finalize theme stucture
+- [ ] Kickoff first meeting!
+- [ ] Brand the UI Library
+- [ ] Plan Scope of components we want to cover
+- [ ] Decide on a design to follow
+- [ ] Finalize theme stucture and naming
