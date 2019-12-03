@@ -37,6 +37,47 @@ run local playground
 
 `yarn start`
 
+## 🧪 Testing
+
+### Snapshots
+
+This project uses [react-test-renderer](https://github.com/facebook/react/tree/master/packages/react-test-renderer) to provide the ability to create rendered snapshots of components. These snapshots will be automatically generated every time a test suite has run. The reasoning behind this is to flag any changes to how a component is rendered. When running your test suite, if a diff between a component and it's snapshot is detected, the test suite will fail. If the diff was intentional, run `yarn test --u` to update your snapshots to an updated version.
+
+Example usage:
+
+```js
+import React from 'react'
+import Button from '../Button'
+import renderer from 'react-test-renderer'
+
+it('renders correctly', () => {
+  const component = renderer.create(<Button />)
+
+  let tree = component.toJSON()
+  expect(tree).toMatchSnapshot()
+})
+```
+
+### DOM
+
+This project uses [react-testing-library](https://github.com/testing-library/react-testing-library) as a light-weight solution to testing React components. It comes with a lot less overhead than Enzyme, and works out-of-the-box with modern React APIs. We want to avoid testing any implementation details of components, and instead focus on testing functionality.
+
+Example usage:
+
+```js
+test('checkboxes (and radios) must use click', () => {
+  const handleChange = jest.fn()
+  const { container } = render(
+    <input type="checkbox" onChange={handleChange} />
+  )
+  const checkbox = container.firstChild
+
+  fireEvent.click(checkbox)
+  expect(handleChange).toHaveBeenCalledTimes(1)
+  expect(checkbox.checked).toBe(true)
+})
+```
+
 ## 👔 Conventional Commits
 
 This project follows [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0-beta.4/) specifications. The Husky `commit-msg` hook checks that commit messages adhere to these standards using [commitlint](https://github.com/conventional-changelog/commitlint).
