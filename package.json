@@ -37,10 +37,11 @@
   "scripts": {
     "start": "styleguidist server",
     "build": "styleguidist build",
-    "test": "react-scripts test",
+    "test": "CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "cz": "git-cz",
-    "lint": "eslint --ext js,ts,tsx src"
+    "lint": "eslint --ext js,ts,tsx src",
+    "pre-commmit": "yarn test && yarn lint && pretty-quick --staged"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -59,7 +60,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint && pretty-quick --staged",
+      "pre-commit": "yarn pre-commmit",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
