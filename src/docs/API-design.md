@@ -40,7 +40,10 @@ type Props = {
   secondary: boolean
   disabled: boolean
 }
-;<Button large small primary secondary disabled>
+```
+
+```tsx
+<Button large small primary secondary disabled>
   WUT?
 </Button>
 ```
@@ -53,7 +56,10 @@ type Props = {
   variant: 'primary' | 'secondary'
   disabled: boolean
 }
-;<Button variant="primary" size="large" disabled>
+```
+
+```tsx
+<Button variant="primary" size="large" disabled>
   Primary Large Disabled Button here
 </Button>
 ```
@@ -78,7 +84,10 @@ Keep in mind when defining props for the components to not override an existing 
 type Props = {
   type: string
 }
-;<Button type="primary">SIGN UP NOW!</Button>
+```
+
+```tsx
+<Button type="primary">SIGN UP NOW!</Button>
 ```
 
 `type` here is a prop defined to handle a potentially arbiturary rule in the library, meanwhile `type` is already an HTML attribute that the `<button />` element takes that can be `submit`,`button`,`reset` that does it's own stuff.
