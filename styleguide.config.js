@@ -36,6 +36,10 @@ module.exports = {
       content: 'src/docs/introduction.md',
     },
     {
+      name: 'API Design',
+      content: 'src/docs/API-design.md',
+    },
+    {
       name: 'Components',
       components: 'src/components/**/[A-Z]*.{ts,tsx}',
       exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
