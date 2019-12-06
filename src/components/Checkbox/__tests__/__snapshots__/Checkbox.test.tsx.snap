@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<label
+  className="css-r8k4kq"
+>
+  <input
+    checked={false}
+    className="css-1mxjity"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <div
+    className="css-k8kyit"
+  />
+   
+</label>
+`;

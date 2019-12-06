@@ -10,7 +10,7 @@ import { Container } from './style'
  */
 export interface ButtonProps {
   /** Content inside the button element */
-  backgroundColor: string
+  backgroundColor?: string
   children?: React.ReactNode
 }
 
