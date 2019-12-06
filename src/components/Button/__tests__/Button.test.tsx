@@ -5,6 +5,6 @@ import Button from '../Button'
 it('renders correctly', () => {
   const component = renderer.create(<Button />)
 
-  let tree = component.toJSON()
+  const tree = component.toJSON()
   expect(tree).toMatchSnapshot()
 })
