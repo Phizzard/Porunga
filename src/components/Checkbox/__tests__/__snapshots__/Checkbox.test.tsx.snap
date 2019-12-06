@@ -6,7 +6,7 @@ exports[`renders correctly 1`] = `
 >
   <input
     checked={false}
-    className="css-1mxjity"
+    className="css-11c0hjf"
     onChange={[Function]}
     type="checkbox"
   />

@@ -31,7 +31,12 @@ export const Checkbox = ({ backgroundColor, children }: CheckboxProps) => {
 
   return (
     <Container {...checkboxProps}>
-      <Input type="checkbox" checked={isChecked} onChange={handleChange} />
+      <Input
+        type="checkbox"
+        {...checkboxProps}
+        checked={isChecked}
+        onChange={handleChange}
+      />
       <CustomCheckbox {...checkboxProps} isChecked={isChecked} /> {children}
     </Container>
   )

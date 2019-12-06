@@ -33,11 +33,16 @@ export const Container = styled.label<CheckboxProps>`
   }
 `
 
-export const Input = styled.input`
+export const Input = styled.input<CheckboxProps>`
   position: absolute;
   margin: 0;
   padding: 0;
-  visibility: hidden;
+  opacity: 0;
+
+  :focus + div {
+    background-color: #fff;
+    color: ${p => p.backgroundColor};
+  }
 `
 
 export const CustomCheckbox = styled.div<CustomCheckboxProps>`
