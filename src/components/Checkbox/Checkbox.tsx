@@ -12,6 +12,8 @@ import { Container, Input, CustomCheckbox } from './style'
 export interface CheckboxProps {
   /** Content inside the checkbox element */
   onChange?(isChecked: boolean, event: object): any
+  id?: string
+  name?: string
   disabled?: boolean
   className?: string
   backgroundColor?: string
@@ -23,6 +25,8 @@ export interface CheckboxProps {
  */
 export const Checkbox = ({
   onChange,
+  id,
+  name,
   disabled,
   className,
   backgroundColor,
@@ -42,9 +46,14 @@ export const Checkbox = ({
   }
 
   return (
-    <Container className={cx(className, { disabled })} {...checkboxProps}>
+    <Container
+      id={id}
+      className={cx(className, { disabled })}
+      {...checkboxProps}
+    >
       <Input
         type="checkbox"
+        name={name}
         {...checkboxProps}
         checked={isChecked}
         onChange={handleChange}

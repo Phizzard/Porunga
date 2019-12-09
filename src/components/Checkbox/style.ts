@@ -1,6 +1,8 @@
 import styled from '@emotion/styled'
 
 interface CheckboxProps {
+  id?: string
+  name?: string
   backgroundColor?: string
 }
 
