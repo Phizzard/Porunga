@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <label
-  className="css-1o2b5ov"
+  className=" css-1mk237q"
 >
   <input
     checked={false}

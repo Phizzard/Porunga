@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useTheme } from 'emotion-theming'
+import cx from 'classnames'
 
 import { ThemeConfig } from '../../types'
 import { get } from '../../utils/get'
@@ -11,6 +12,7 @@ import { Container, Input, CustomCheckbox } from './style'
 export interface CheckboxProps {
   /** Content inside the checkbox element */
   onChange?(isChecked: boolean, event: object): any
+  disabled?: boolean
   className?: string
   backgroundColor?: string
   children?: React.ReactNode
@@ -21,6 +23,7 @@ export interface CheckboxProps {
  */
 export const Checkbox = ({
   onChange,
+  disabled,
   className,
   backgroundColor,
   children,
@@ -39,12 +42,13 @@ export const Checkbox = ({
   }
 
   return (
-    <Container className={className} {...checkboxProps}>
+    <Container className={cx(className, { disabled })} {...checkboxProps}>
       <Input
         type="checkbox"
         {...checkboxProps}
         checked={isChecked}
         onChange={handleChange}
+        disabled={disabled}
       />
       <CustomCheckbox {...checkboxProps} isChecked={isChecked} /> {children}
     </Container>

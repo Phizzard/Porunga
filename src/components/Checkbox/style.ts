@@ -31,6 +31,22 @@ export const Container = styled.label<CheckboxProps>`
       color: ${p => p.backgroundColor};
     }
   }
+
+  &.disabled {
+    color: #ccc;
+    cursor: no-drop;
+
+    > div {
+      background-color: #ccc;
+      color: #fff;
+    }
+
+    :hover,
+    :focus {
+      background-color: #f7fafc;
+      color: #ccc;
+    }
+  }
 `
 
 export const Input = styled.input<CheckboxProps>`
