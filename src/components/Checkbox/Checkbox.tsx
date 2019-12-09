@@ -35,7 +35,7 @@ export const Checkbox = ({
   const handleChange = (event: object) => {
     const newState = !isChecked
     setIsChecked(newState)
-    onChange(newState, event)
+    if (onChange) onChange(newState, event)
   }
 
   return (
