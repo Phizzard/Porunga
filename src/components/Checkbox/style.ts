@@ -22,7 +22,7 @@ export const Container = styled.label<CheckboxProps>`
   transition: 0.2s;
 
   :hover,
-  :focus {
+  :focus-within {
     background-color: ${p => p.backgroundColor};
     color: #fff;
 
