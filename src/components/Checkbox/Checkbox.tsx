@@ -10,6 +10,8 @@ import { Container, Input, CustomCheckbox } from './style'
  */
 export interface CheckboxProps {
   /** Content inside the checkbox element */
+  onChange?(isChecked: boolean, event: object): any
+  className?: string
   backgroundColor?: string
   children?: React.ReactNode
 }
@@ -17,7 +19,12 @@ export interface CheckboxProps {
 /**
  * Checkbox
  */
-export const Checkbox = ({ backgroundColor, children }: CheckboxProps) => {
+export const Checkbox = ({
+  onChange,
+  className,
+  backgroundColor,
+  children,
+}: CheckboxProps) => {
   const [isChecked, setIsChecked] = useState(false)
   const theme: ThemeConfig = useTheme()
 
@@ -25,12 +32,14 @@ export const Checkbox = ({ backgroundColor, children }: CheckboxProps) => {
     backgroundColor: backgroundColor || get(theme, 'root', 'colors', 'brand'),
   }
 
-  const handleChange = () => {
-    setIsChecked(!isChecked)
+  const handleChange = (event: object) => {
+    const newState = !isChecked
+    setIsChecked(newState)
+    onChange(newState, event)
   }
 
   return (
-    <Container {...checkboxProps}>
+    <Container className={className} {...checkboxProps}>
       <Input
         type="checkbox"
         {...checkboxProps}
