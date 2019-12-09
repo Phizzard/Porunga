@@ -45,7 +45,9 @@ module.exports = {
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'src/components/Theme/Theme'),
   },
-  propsParser: require('react-docgen-typescript').withDefaultConfig().parse,
+  propsParser: require('react-docgen-typescript').withDefaultConfig({
+    shouldExtractLiteralValuesFromEnum: true,
+  }).parse,
   ignore: [
     '**/__tests__/**',
     '**/*.test.{js,jsx,ts,tsx}',
