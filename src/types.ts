@@ -25,6 +25,7 @@ export type Palette =
   | 'dark-4'
   | 'dark-5'
   | 'dark-6'
+  | 'transparent'
 
 export type Sizes =
   | 'xxsmall'
@@ -34,11 +35,36 @@ export type Sizes =
   | 'large'
   | 'xlarge'
   | 'xxlarge'
+  | 'full'
+  | 'unset'
+
+export type FlexDirection = 'row' | 'row-reverse' | 'column' | 'column-reverse'
+
+export type BorderStyles =
+  | 'none'
+  | 'solid'
+  | 'dashed'
+  | 'dotted'
+  | 'double'
+  | 'groove'
+  | 'ridge'
+  | 'inset'
+  | 'outset'
+  | 'hidden'
 
 export interface ThemeConfig {
   root?: {
     colors?: {
       [name in Palette]?: string
+    }
+    spacing?: {
+      [name in Sizes]?: string
+    }
+    sizes?: {
+      [name in Sizes]?: string
+    }
+    borderSizes?: {
+      [name in Sizes]?: string
     }
   }
   heading?: {
