@@ -63,6 +63,18 @@ const defaultTheme: ThemeConfig = {
       unset: '',
     },
   },
+  paragraph: {
+    sizes: {
+      xxsmall: '11px',
+      xsmall: '12px',
+      small: '14px',
+      medium: '16px',
+      large: '18px',
+      xlarge: '20px',
+      xxlarge: '24px',
+      unset: '',
+    },
+  },
 }
 
 export default defaultTheme

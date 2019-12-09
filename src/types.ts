@@ -72,4 +72,9 @@ export interface ThemeConfig {
       [name in Sizes]?: string
     }
   }
+  paragraph?: {
+    sizes?: {
+      [name in Sizes]?: string
+    }
+  }
 }
