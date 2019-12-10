@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTheme } from 'emotion-theming'
 
-import { ThemeConfig } from '../../types'
+import { ThemeConfig, Palette } from '../../types'
 import { get } from '../../utils/get'
 import { Container } from './style'
 
@@ -10,7 +10,7 @@ import { Container } from './style'
  */
 export interface TextAreaProps {
   /** Content inside the textarea element */
-  backgroundColor?: string
+  borderColor?: Palette
   rows?: number
   cols?: number
   maxlength?: number
@@ -23,7 +23,7 @@ export interface TextAreaProps {
  * TextArea
  */
 export const TextArea = ({
-  backgroundColor,
+  borderColor,
   rows,
   cols,
   maxlength,
@@ -34,7 +34,7 @@ export const TextArea = ({
   const theme: ThemeConfig = useTheme()
 
   const textAreaProps = {
-    backgroundColor: backgroundColor || get(theme, 'root', 'colors', 'brand'),
+    borderColor: borderColor || get(theme, 'root', 'colors', 'brand'),
     rows: rows,
     cols: cols,
     maxlength: maxlength,

@@ -1,13 +1,13 @@
 import styled from '@emotion/styled'
 
 type TextAreaProps = {
-  backgroundColor?: string
+  borderColor?: string
 }
 
 export const Container = styled.div<TextAreaProps>`
   textarea {
-    color: ${p => p.backgroundColor};
-    border: 3px solid ${p => p.backgroundColor};
+    color: ${p => p.borderColor};
+    border: 3px solid ${p => p.borderColor};
     padding: 0.3rem;
   }
 `
