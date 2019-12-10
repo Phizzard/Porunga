@@ -14,7 +14,7 @@ export interface ButtonProps {
   disabled?: boolean
   className?: string
   backgroundColor?: string
-  children?: React.ReactNode
+  label: string
 }
 
 /**
@@ -25,7 +25,7 @@ export const Button = ({
   disabled,
   className,
   backgroundColor,
-  children,
+  label,
 }: ButtonProps) => {
   const theme: ThemeConfig = useTheme()
 
@@ -36,7 +36,11 @@ export const Button = ({
     backgroundColor: backgroundColor || get(theme, 'root', 'colors', 'brand'),
   }
 
-  return <Container {...buttonProps}>{children}</Container>
+  return (
+    <Container {...buttonProps} aria-label={label}>
+      {label}
+    </Container>
+  )
 }
 
 export default Button
