@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressBar renders correctly 1`] = `
+<div
+  aria-valuemax={100}
+  aria-valuemin={0}
+  aria-valuenow={0}
+  className="css-qcnn85"
+  role="progressbar"
+>
+  <span
+    className="css-1iy5kdx"
+    style={
+      Object {
+        "width": "0%",
+      }
+    }
+  />
+</div>
+`;
