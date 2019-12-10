@@ -9,7 +9,7 @@ interface ThemeProps {
   children: React.ReactNode
 }
 
-export const Theme = ({ children }: ThemeProps) => (
+const Theme = ({ children }: ThemeProps) => (
   <ThemeProvider theme={defaultTheme}>{children}</ThemeProvider>
 )
 export default Theme
