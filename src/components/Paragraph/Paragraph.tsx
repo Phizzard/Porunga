@@ -21,7 +21,7 @@ type ParagraphProps = {
 /**
  * Paragraph
  */
-export const Paragraph = ({
+const Paragraph = ({
   children,
   className,
   color = 'dark-1',
