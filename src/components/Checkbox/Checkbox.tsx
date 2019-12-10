@@ -18,7 +18,7 @@ export interface CheckboxProps {
   disabled?: boolean
   className?: string
   backgroundColor?: string
-  children?: React.ReactNode
+  label: string
 }
 
 /**
@@ -32,7 +32,7 @@ export const Checkbox = ({
   disabled,
   className,
   backgroundColor,
-  children,
+  label,
 }: CheckboxProps) => {
   const [isChecked, setIsChecked] = useState(checked || false)
   const theme: ThemeConfig = useTheme()
@@ -69,8 +69,9 @@ export const Checkbox = ({
         checked={isChecked}
         onChange={handleChange}
         disabled={disabled}
+        aria-label={label}
       />
-      <CustomCheckbox {...checkboxProps} isChecked={isChecked} /> {children}
+      <CustomCheckbox {...checkboxProps} isChecked={isChecked} /> {label}
     </Container>
   )
 }

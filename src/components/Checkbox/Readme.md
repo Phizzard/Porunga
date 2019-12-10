@@ -1,5 +1,5 @@
 Default Checkbox
 
 ```jsx
-<Checkbox>Default Checkbox</Checkbox>
+<Checkbox label="Default Checkbox" />
 ```
