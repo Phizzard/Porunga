@@ -36,6 +36,10 @@ module.exports = {
       content: 'src/docs/introduction.md',
     },
     {
+      name: 'API Design',
+      content: 'src/docs/API-design.md',
+    },
+    {
       name: 'Components',
       components: 'src/components/**/[A-Z]*.{ts,tsx}',
       exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
@@ -45,7 +49,9 @@ module.exports = {
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'src/components/Theme/Theme'),
   },
-  propsParser: require('react-docgen-typescript').withDefaultConfig().parse,
+  propsParser: require('react-docgen-typescript').withDefaultConfig({
+    shouldExtractLiteralValuesFromEnum: true,
+  }).parse,
   ignore: [
     '**/__tests__/**',
     '**/*.test.{js,jsx,ts,tsx}',
