@@ -25,7 +25,7 @@ export interface HeadingProps {
 /**
  * Heading
  */
-export const Heading = ({
+const Heading = ({
   ariaLabel,
   children,
   className,
