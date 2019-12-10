@@ -10,21 +10,37 @@ import { Container } from './style'
  */
 export interface ButtonProps {
   /** Content inside the button element */
-  backgroundColor: string
-  children?: React.ReactNode
+  onClick?(): any
+  disabled?: boolean
+  className?: string
+  backgroundColor?: string
+  label: string
 }
 
 /**
  * Button
  */
-export const Button = ({ backgroundColor, children }: ButtonProps) => {
+export const Button = ({
+  onClick,
+  disabled,
+  className,
+  backgroundColor,
+  label,
+}: ButtonProps) => {
   const theme: ThemeConfig = useTheme()
 
   const buttonProps = {
+    onClick,
+    disabled,
+    className,
     backgroundColor: backgroundColor || get(theme, 'root', 'colors', 'brand'),
   }
 
-  return <Container {...buttonProps}>{children}</Container>
+  return (
+    <Container {...buttonProps} aria-label={label}>
+      {label}
+    </Container>
+  )
 }
 
 export default Button

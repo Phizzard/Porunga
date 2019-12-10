@@ -1,4 +1,5 @@
 Default Button
+
 ```jsx
-<Button>Default Button</Button>
+<Button label="Default Button" />
 ```
