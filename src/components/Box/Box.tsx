@@ -59,7 +59,7 @@ export type BoxProps = {
   width?: Sizes
 }
 
-export const Box = ({
+const Box = ({
   children,
   as = '',
   alignContent = 'stretch',
