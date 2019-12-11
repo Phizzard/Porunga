@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<button
-  className="css-1yr3jbx"
-/>
+<h1
+  className="css-oq46em"
+>
+  Heading
+</h1>
 `;

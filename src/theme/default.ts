@@ -72,6 +72,17 @@ const defaultTheme: ThemeConfig = {
       large: '18px',
       xlarge: '20px',
       xxlarge: '24px',
+    },
+  },
+  heading: {
+    sizes: {
+      xxsmall: '3px',
+      xsmall: '5px',
+      small: '10px',
+      medium: '20px',
+      large: '40px',
+      xlarge: '60px',
+      xxlarge: '80px',
       unset: '',
     },
   },

@@ -15,8 +15,22 @@ export const Container = styled.button<ButtonProps>`
   background-color: #f7fafc;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   transition: 0.2s;
-  :hover {
+
+  :hover,
+  :focus {
     background-color: ${p => p.backgroundColor};
     color: #fff;
+  }
+
+  :disabled {
+    border-color: #ccc;
+    color: #ccc;
+    cursor: no-drop;
+
+    :hover,
+    :focus {
+      background-color: #f7fafc;
+      color: #ccc;
+    }
   }
 `
