@@ -38,6 +38,31 @@ export type Sizes =
   | 'full'
   | 'unset'
 
+export type Weight =
+  | 'normal'
+  | 'bold'
+  | 'bolder'
+  | 'lighter'
+  | '100'
+  | '200'
+  | '300'
+  | '400'
+  | '500'
+  | '600'
+  | '700'
+  | '800'
+  | 'inherit'
+  | 'initial'
+  | 'unset'
+
+export type Style =
+  | 'normal'
+  | 'italic'
+  | 'oblique'
+  | 'inherit'
+  | 'initial'
+  | 'unset'
+
 export type FlexDirection = 'row' | 'row-reverse' | 'column' | 'column-reverse'
 
 export type BorderStyles =
@@ -75,6 +100,17 @@ export interface ThemeConfig {
   paragraph?: {
     sizes?: {
       [name in Sizes]?: string
+    }
+  }
+  text?: {
+    sizes?: {
+      [name in Sizes]?: string
+    }
+    weights?: {
+      [name in Weight]?: string
+    }
+    styles?: {
+      [name in Style]?: string
     }
   }
 }
