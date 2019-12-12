@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 
 import { FlexDirection } from '../../types'
+import { SerializedStyles } from '@emotion/core'
 
 export type StyledBoxProps = {
   alignContent?: string
@@ -10,10 +11,14 @@ export type StyledBoxProps = {
   borderWidth?: string
   borderColor?: string
   borderStyle?: string
+  grow?: number
   heightProp?: string
   justifyContent?: string
   directionProp?: FlexDirection
   margin?: string
+  rounded?: SerializedStyles
+  shadow?: string
+  shrink?: number
   padding?: string
   wrapProp?: 'wrap' | 'wrap-reverse' | 'no-wrap'
   widthProp?: string
@@ -22,6 +27,8 @@ export type StyledBoxProps = {
 export const Container = styled.div<StyledBoxProps>`
   display: flex;
   flex-direction: ${p => p.directionProp};
+  flex-grow: ${p => p.grow};
+  flex-shrink: ${p => p.shrink};
   padding: ${p => p.padding};
   margin: ${p => p.margin};
   flex-wrap: ${p => p.wrapProp};
@@ -35,4 +42,6 @@ export const Container = styled.div<StyledBoxProps>`
   border-width: ${p => p.borderWidth};
   border-style: ${p => p.borderStyle};
   border-color: ${p => p.borderColor};
+  box-shadow: ${p => p.shadow};
+  ${p => p.rounded};
 `

@@ -1,11 +1,13 @@
 import React from 'react'
 import { useTheme } from 'emotion-theming'
+import { roundedStyles } from '../../utils/roundedStyles'
 
 import {
   Sizes,
   FlexDirection,
   Palette,
   BorderStyles,
+  Rounded,
   ThemeConfig,
 } from '../../types'
 import { get } from '../../utils/get'
@@ -38,6 +40,8 @@ export type BoxProps = {
   children?: React.ReactNode
   /** Specifies the direction of the child items */
   direction?: FlexDirection
+  /** Grow */
+  grow?: number
   /** The fixed height */
   height?: Sizes
   /** How to align the contents along the main axis. */
@@ -50,9 +54,15 @@ export type BoxProps = {
     | 'flex-start'
     | 'stretch'
   /** The amount of margin around the box contents. */
-  margin?: Sizes
+  margin?: Sizes | 'auto'
+  /** How round the corners are of the box */
+  rounded?: Rounded
+  /** The amount of box shadow applied to box */
+  shadow?: Sizes
+  /** shrink */
+  shrink?: number
   /** The amount of padding around the box contents. */
-  padding?: Sizes
+  padding?: Sizes | 'auto'
   /** Specifies if child elements should fall to a new row if they don't fit */
   wrap?: 'wrap' | 'wrap-reverse' | 'no-wrap'
   /** The fixed width */
@@ -70,14 +80,20 @@ const Box = ({
   borderStyle = 'none',
   borderWidth = 'unset',
   direction = 'row',
+  grow,
   height = 'unset',
   justifyContent = 'stretch',
   padding = 'unset',
+  rounded = false,
+  shadow = 'unset',
+  shrink,
   margin = 'unset',
   wrap = 'no-wrap',
   width = 'unset',
 }: BoxProps) => {
   const theme: ThemeConfig = useTheme()
+
+  const roundedProps = roundedStyles(rounded, theme, 'box')
 
   const boxProps = {
     alignContent,
@@ -89,9 +105,13 @@ const Box = ({
     borderStyle: borderStyle,
     borderWidth: get(theme, 'root', 'borderSizes', borderWidth),
     directionProp: direction,
+    grow,
     justifyContent,
     heightProp: get(theme, 'root', 'sizes', height),
     margin: get(theme, 'root', 'spacing', margin),
+    rounded: roundedProps,
+    shadow: get(theme, 'root', 'shadows', shadow),
+    shrink,
     padding: get(theme, 'root', 'spacing', padding),
     wrapProp: wrap,
     widthProp: get(theme, 'root', 'sizes', width),

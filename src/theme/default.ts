@@ -132,6 +132,9 @@ const defaultTheme: ThemeConfig = {
       unset: '',
     },
   },
+  box: {
+    rounded: '20px',
+  },
 }
 
 export default defaultTheme

@@ -19,6 +19,8 @@ type CardProps = {
     srcSet?: string
     sizes?: string
   }
+  /** Whether or not to round the corners to the theme's specifcations */
+  rounded?: boolean
   /** The main title in the card content area */
   title?: string
 }
@@ -26,6 +28,7 @@ const Card = ({
   children,
   heroImage,
   title,
+  rounded,
   footerText,
 }: CardProps) => {
   const heroImagePositionMap: {
@@ -44,9 +47,11 @@ const Card = ({
       borderColor="light-4"
       borderWidth="xxsmall"
       borderStyle="solid"
+      rounded={rounded}
     >
       {heroImage && (
         <Box
+          rounded={rounded}
           margin="auto"
           width="full"
           height="full"
@@ -70,6 +75,7 @@ const Card = ({
         {footerText && (
           <Box width="full">
             <Box
+              rounded={{ br: rounded, bl: rounded }}
               padding="medium"
               grow={1}
             >

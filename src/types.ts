@@ -63,6 +63,10 @@ export type Style =
   | 'initial'
   | 'unset'
 
+export type Rounded =
+  | boolean
+  | { tl?: boolean; tr?: boolean; br?: boolean; bl?: boolean }
+
 export type FlexDirection = 'row' | 'row-reverse' | 'column' | 'column-reverse'
 
 export type BorderStyles =
@@ -115,5 +119,8 @@ export interface ThemeConfig {
     styles?: {
       [name in Style]?: string
     }
+  }
+  box?: {
+    rounded?: string
   }
 }
