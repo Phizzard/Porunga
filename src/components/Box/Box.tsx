@@ -40,7 +40,7 @@ export type BoxProps = {
   children?: React.ReactNode
   /** Specifies the direction of the child items */
   direction?: FlexDirection
-  /** Grow */
+  /** How much of the remaining space in the flex container should be assigned to the box */
   grow?: number
   /** The fixed height */
   height?: Sizes
@@ -59,7 +59,7 @@ export type BoxProps = {
   rounded?: Rounded
   /** The amount of box shadow applied to box */
   shadow?: Sizes
-  /** shrink */
+  /** If the size of all flex items is larger than the flex container, items shrink to fit accordingly */
   shrink?: number
   /** The amount of padding around the box contents. */
   padding?: Sizes | 'auto'
