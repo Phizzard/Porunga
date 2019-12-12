@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { useTheme } from 'emotion-theming'
-import cx from 'classnames'
 
 import { ThemeConfig } from '../../types'
 import { get } from '../../utils/get'
@@ -39,6 +38,7 @@ export const Checkbox = ({
 
   const checkboxProps = {
     backgroundColor: backgroundColor || get(theme, 'root', 'colors', 'brand'),
+    disabled,
   }
 
   const handleChange = useCallback(() => {
@@ -57,11 +57,7 @@ export const Checkbox = ({
   }, [checked, onChange])
 
   return (
-    <Container
-      id={id}
-      className={cx(className, { disabled })}
-      {...checkboxProps}
-    >
+    <Container id={id} className={className} {...checkboxProps}>
       <Input
         type="checkbox"
         name={name}

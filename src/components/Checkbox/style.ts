@@ -1,9 +1,11 @@
 import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 
 interface CheckboxProps {
   id?: string
   name?: string
   backgroundColor?: string
+  disabled?: boolean
 }
 
 interface CustomCheckboxProps {
@@ -34,7 +36,9 @@ export const Container = styled.label<CheckboxProps>`
     }
   }
 
-  &.disabled {
+  ${p =>
+    p.disabled &&
+    css(`
     color: #ccc;
     cursor: no-drop;
 
@@ -48,7 +52,7 @@ export const Container = styled.label<CheckboxProps>`
       background-color: #f7fafc;
       color: #ccc;
     }
-  }
+  `)}
 `
 
 export const Input = styled.input<CheckboxProps>`
