@@ -83,12 +83,15 @@ export interface ThemeConfig {
       [name in Palette]?: string
     }
     spacing?: {
-      [name in Sizes]?: string
+      [name in Sizes | 'auto']?: string
     }
     sizes?: {
       [name in Sizes]?: string
     }
     borderSizes?: {
+      [name in Sizes]?: string
+    }
+    shadows?: {
       [name in Sizes]?: string
     }
   }
