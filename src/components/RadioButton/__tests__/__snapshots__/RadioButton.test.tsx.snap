@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<label
+  className="css-18vfld2"
+>
+  <input
+    className="css-1glukks"
+    name="radio"
+    type="radio"
+    value="one"
+  />
+  <span
+    className="checkmark"
+  />
+  One
+</label>
+`;
