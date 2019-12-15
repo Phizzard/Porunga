@@ -4,7 +4,7 @@ const defaultTheme: ThemeConfig = {
   root: {
     colors: {
       brand: '#FF0000',
-      'accent-1': '',
+      'accent-1': '#166CA5',
       'accent-2': '',
       'accent-3': '',
       'accent-4': '',
@@ -12,9 +12,9 @@ const defaultTheme: ThemeConfig = {
       'neutral-2': '',
       'neutral-3': '',
       'neutral-4': '',
-      error: '',
-      warning: '',
-      success: '',
+      error: '#FF0000',
+      warning: '#FFF000',
+      success: '#00FF00',
       unknown: '',
       disabled: '',
       'light-1': '#F8F8F8',
