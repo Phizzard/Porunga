@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React from 'react'
 import renderer from 'react-test-renderer'
 import RadioButton from '../RadioButton'
 
