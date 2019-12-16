@@ -8,7 +8,7 @@ type ContainerProps = {
   styleProp?: string
 }
 
-export const Container = styled.p<ContainerProps>`
+export const Container = styled.span<ContainerProps>`
   color: ${p => p.colorProp};
   font-size: ${p => p.size};
   font-family: ${p => p.family};
