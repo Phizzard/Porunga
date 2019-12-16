@@ -40,6 +40,10 @@ module.exports = {
       content: 'src/docs/API-design.md',
     },
     {
+      name: 'Theming',
+      content: 'src/docs/Theming.md',
+    },
+    {
       name: 'Components',
       components: 'src/components/**/index.{ts,tsx}',
       ignore: 'src/components/index.ts',
