@@ -41,7 +41,8 @@ module.exports = {
     },
     {
       name: 'Components',
-      components: 'src/components/**/[A-Z]*.{ts,tsx}',
+      components: 'src/components/**/index.{ts,tsx}',
+      ignore: 'src/components/index.ts',
       exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
     },
