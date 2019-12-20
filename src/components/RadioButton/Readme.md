@@ -1,7 +1,7 @@
 Default RadioButton
 
 ```jsx
-<RadioButton name="radio" value="one" label="One" />
-<RadioButton name="radio" value="two" label="Two" />
-<RadioButton name="radio" value="three" label="Three" />
+<RadioButton backgroundColor="error" name="radio" value="one" label="One" />
+<RadioButton backgroundColor="warning" name="radio" value="two" label="Two" />
+<RadioButton backgroundColor="success" name="radio" value="three" label="Three" />
 ```
