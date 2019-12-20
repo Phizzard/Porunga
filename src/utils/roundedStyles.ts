@@ -4,13 +4,13 @@ import { ThemeConfig, Rounded } from '../types'
 
 /**
  *
- * @param rounded
  * @param theme
+ * @param rounded
  * @param componentKey
  */
 export function roundedStyles(
-  rounded: Rounded,
   theme: ThemeConfig,
+  rounded: Rounded,
   componentKey: 'box'
 ): SerializedStyles {
   if (typeof rounded === 'object') {
