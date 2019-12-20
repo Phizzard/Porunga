@@ -15,11 +15,11 @@ export type StyledBoxProps = {
   heightProp?: string
   justifyContent?: string
   directionProp?: FlexDirection
-  margin?: string
+  margin?: SerializedStyles
   rounded?: SerializedStyles
   shadow?: string
   shrink?: number
-  padding?: string
+  padding?: SerializedStyles
   wrapProp?: 'wrap' | 'wrap-reverse' | 'no-wrap'
   widthProp?: string
 }
@@ -29,8 +29,6 @@ export const Container = styled.div<StyledBoxProps>`
   flex-direction: ${p => p.directionProp};
   flex-grow: ${p => p.grow};
   flex-shrink: ${p => p.shrink};
-  padding: ${p => p.padding};
-  margin: ${p => p.margin};
   flex-wrap: ${p => p.wrapProp};
   width: ${p => p.widthProp};
   height: ${p => p.heightProp};
@@ -43,5 +41,7 @@ export const Container = styled.div<StyledBoxProps>`
   border-style: ${p => p.borderStyle};
   border-color: ${p => p.borderColor};
   box-shadow: ${p => p.shadow};
+  ${p => p.margin};
+  ${p => p.padding};
   ${p => p.rounded};
 `
