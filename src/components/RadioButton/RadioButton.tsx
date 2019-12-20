@@ -12,7 +12,7 @@ export interface RadioButtonProps {
   /** aria-label will be added to the element and used by screen readers */
   ariaDescribedBy?: string
   /** A backgroundColor identifier */
-  backgroundColor?: string
+  backgroundColor?: Palette
   /** A checked identifier */
   checked?: boolean
   /** Content inside the RadioButton element */
@@ -36,7 +36,7 @@ export interface RadioButtonProps {
  */
 export const RadioButton = ({
   ariaDescribedBy,
-  backgroundColor,
+  backgroundColor = 'brand',
   checked,
   children,
   className,
@@ -51,7 +51,7 @@ export const RadioButton = ({
   const radioButtonProps = {
     'aria-describedby': ariaDescribedBy,
     className,
-    backgroundColor: backgroundColor || get(theme, 'root', 'colors', 'brand'),
+    backgroundColor: get(theme, 'root', 'colors', backgroundColor),
     colorProp: get(theme, 'root', 'colors', color),
   }
 

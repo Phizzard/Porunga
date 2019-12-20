@@ -12,7 +12,7 @@ export const Container = styled.label<RadioButtonProps>`
   padding-left: 2rem;
   margin-bottom: 0.5rem;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 16px;
   user-select: none;
 
   /* Create a custom radio button */
@@ -20,8 +20,8 @@ export const Container = styled.label<RadioButtonProps>`
     position: absolute;
     top: 0;
     left: 0;
-    height: 25px;
-    width: 25px;
+    height: 21px;
+    width: 21px;
     background-color: #eee;
     border-radius: 50%;
   }
@@ -35,10 +35,10 @@ export const Container = styled.label<RadioButtonProps>`
 
   /* Style the indicator (dot/circle) */
   .checkmark:after {
-    top: 9px;
-    left: 9px;
-    width: 8px;
-    height: 8px;
+    top: 7px;
+    left: 7px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: white;
   }
