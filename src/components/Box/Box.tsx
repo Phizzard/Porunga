@@ -9,9 +9,11 @@ import {
   BorderStyles,
   Rounded,
   ThemeConfig,
+  DirectionsSizes,
 } from '../../types'
 import { get } from '../../utils/get'
 import { Container } from './style'
+import { spacingStyles } from '../../utils/spacingStyles'
 
 export type BoxProps = {
   /** How to align the contents along the cross axis. */
@@ -53,16 +55,16 @@ export type BoxProps = {
     | 'space-evenly'
     | 'flex-start'
     | 'stretch'
-  /** The amount of margin around the box contents. */
-  margin?: Sizes | 'auto'
+  /** The amount of margin around the box contents.  DirectionSizes: {t: enum, r: enum, l: enum, b: enum} */
+  margin?: Sizes | 'auto' | DirectionsSizes
   /** How round the corners are of the box */
   rounded?: Rounded
   /** The amount of box shadow applied to box */
   shadow?: Sizes
   /** If the size of all flex items is larger than the flex container, items shrink to fit accordingly */
   shrink?: number
-  /** The amount of padding around the box contents. */
-  padding?: Sizes | 'auto'
+  /** The amount of padding around the box contents. DirectionSizes: {t: enum, r: enum, l: enum, b: enum} */
+  padding?: Sizes | 'auto' | DirectionsSizes
   /** Specifies if child elements should fall to a new row if they don't fit */
   wrap?: 'wrap' | 'wrap-reverse' | 'no-wrap'
   /** The fixed width */
@@ -93,7 +95,9 @@ const Box = ({
 }: BoxProps) => {
   const theme: ThemeConfig = useTheme()
 
-  const roundedProps = roundedStyles(rounded, theme, 'box')
+  const roundedProps = roundedStyles(theme, rounded, 'box')
+  const paddingProps = spacingStyles(theme, padding, 'padding')
+  const marginProps = spacingStyles(theme, margin, 'margin')
 
   const boxProps = {
     alignContent,
@@ -108,11 +112,11 @@ const Box = ({
     grow,
     justifyContent,
     heightProp: get(theme, 'root', 'sizes', height),
-    margin: get(theme, 'root', 'spacing', margin),
+    margin: marginProps,
     rounded: roundedProps,
     shadow: get(theme, 'root', 'shadows', shadow),
     shrink,
-    padding: get(theme, 'root', 'spacing', padding),
+    padding: paddingProps,
     wrapProp: wrap,
     widthProp: get(theme, 'root', 'sizes', width),
   }
