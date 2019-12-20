@@ -63,9 +63,15 @@ export type Style =
   | 'initial'
   | 'unset'
 
-export type Rounded =
-  | boolean
-  | { tl?: boolean; tr?: boolean; br?: boolean; bl?: boolean }
+export type Rounded = boolean | DirectionsBoolean
+
+export type DirectionsBoolean = {
+  tl?: boolean
+  tr?: boolean
+  br?: boolean
+  bl?: boolean
+}
+export type DirectionsSizes = { t?: Sizes; l?: Sizes; r?: Sizes; b?: Sizes }
 
 export type FlexDirection = 'row' | 'row-reverse' | 'column' | 'column-reverse'
 
