@@ -1,11 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="css-104m9o7"
->
-  <textarea
-    onKeyUp={[Function]}
-  />
-</div>
+<textarea
+  className="css-cyx3eq"
+/>
 `;
