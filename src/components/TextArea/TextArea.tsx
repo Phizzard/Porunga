@@ -29,7 +29,7 @@ export interface TextAreaProps {
  * TextArea
  */
 export const TextArea = ({
-  borderColor,
+  borderColor = 'accent-1',
   rows,
   cols,
   maxlength,
@@ -40,7 +40,9 @@ export const TextArea = ({
   const theme: ThemeConfig = useTheme()
 
   const textAreaProps = {
-    borderColor: borderColor || get(theme, 'root', 'colors', 'brand'),
+    backgroundColor: get(theme, 'root', 'colors', 'light-1'),
+    borderColor: get(theme, 'root', 'colors', borderColor),
+    color: get(theme, 'root', 'colors', 'dark-1'),
     rows: rows,
     cols: cols,
     maxlength: maxlength,
@@ -48,14 +50,7 @@ export const TextArea = ({
     placeholder: placeholder,
   }
 
-  const handleKeyUp = () => {}
-
-  return (
-    <Container {...textAreaProps}>
-      <textarea {...textAreaProps} onKeyUp={handleKeyUp}></textarea>
-      {children}
-    </Container>
-  )
+  return <Container {...textAreaProps}>{children}</Container>
 }
 
 export default TextArea
