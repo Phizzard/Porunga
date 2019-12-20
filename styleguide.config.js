@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   assetsDir: 'images/',
-  pagePerSection: true,
+  pagePerSection: false,
   styles: {
     StyleGuide: {
       '@global body': {
@@ -40,8 +40,13 @@ module.exports = {
       content: 'src/docs/API-design.md',
     },
     {
+      name: 'Theming',
+      content: 'src/docs/Theming.md',
+    },
+    {
       name: 'Components',
-      components: 'src/components/**/[A-Z]*.{ts,tsx}',
+      components: 'src/components/*/index.{ts,tsx}',
+      ignore: 'src/components/index.ts',
       exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
     },

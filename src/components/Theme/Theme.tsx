@@ -4,12 +4,15 @@ import { ThemeProvider } from 'emotion-theming'
 import { defaultTheme } from '../../theme'
 
 interface ThemeProps {
-  /** Content inside the Theme Wrapper */
+  /** Custom theme config object */
   theme: ThemeConfig
+  /** Content inside the Theme Wrapper */
   children: React.ReactNode
 }
 
-const Theme = ({ children }: ThemeProps) => (
-  <ThemeProvider theme={defaultTheme}>{children}</ThemeProvider>
+const Theme = ({ children, theme }: ThemeProps) => (
+  <ThemeProvider theme={Object.assign({}, defaultTheme, theme)}>
+    {children}
+  </ThemeProvider>
 )
 export default Theme

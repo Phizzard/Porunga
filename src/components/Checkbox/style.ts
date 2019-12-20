@@ -15,21 +15,15 @@ interface CustomCheckboxProps {
 
 export const Container = styled.label<CheckboxProps>`
   position: relative;
-  color: ${p => p.backgroundColor};
-  padding: 0.6rem 1.1rem;
+  color: #000;
+  padding: 0.2rem 0.5rem;
   font-size: 1.1rem;
   font-weight: 500;
-  border-radius: 24px;
   cursor: pointer;
-  background-color: #f7fafc;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   transition: 0.2s;
 
   :hover,
   :focus-within {
-    background-color: ${p => p.backgroundColor};
-    color: #fff;
-
     > div {
       background-color: #fff;
       color: ${p => p.backgroundColor};
@@ -71,8 +65,9 @@ export const CustomCheckbox = styled.div<CustomCheckboxProps>`
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  background-color: ${p => p.backgroundColor};
-  color: #fff;
+  border: solid 2px ${p => p.backgroundColor};
+  background-color: #fff;
+  color: ${p => p.backgroundColor};
   margin: -3px 5px 0 0;
   padding: 0;
   font-size: 1.1rem;

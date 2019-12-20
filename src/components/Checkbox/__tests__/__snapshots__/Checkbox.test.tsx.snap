@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <label
-  className="css-jloiub"
+  className="css-4su3ie"
 >
   <input
     checked={false}
@@ -11,7 +11,7 @@ exports[`renders correctly 1`] = `
     type="checkbox"
   />
   <div
-    className="css-k8kyit"
+    className="css-1fwllpd"
   />
    
 </label>
