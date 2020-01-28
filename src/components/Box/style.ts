@@ -25,6 +25,8 @@ export type StyledBoxProps = {
 }
 
 export const Container = styled.div<StyledBoxProps>`
+  box-sizing: border-box;
+  padding-inline-start: 0;
   display: flex;
   flex-direction: ${p => p.directionProp};
   flex-grow: ${p => p.grow};
