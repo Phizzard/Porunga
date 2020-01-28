@@ -2,6 +2,7 @@ import React from 'react'
 import { ThemeConfig } from '../../types'
 import { ThemeProvider } from 'emotion-theming'
 import { defaultTheme } from '../../theme'
+import _merge from 'lodash.merge'
 
 interface ThemeProps {
   /** Custom theme config object */
@@ -11,7 +12,7 @@ interface ThemeProps {
 }
 
 const Theme = ({ children, theme }: ThemeProps) => (
-  <ThemeProvider theme={Object.assign({}, defaultTheme, theme)}>
+  <ThemeProvider theme={_merge({}, defaultTheme, theme)}>
     {children}
   </ThemeProvider>
 )
