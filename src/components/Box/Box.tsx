@@ -38,6 +38,8 @@ export type BoxProps = {
   borderStyle?: BorderStyles
   /** A size identifier */
   borderWidth?: Sizes
+  /** A class */
+  className?: string
   /** Content inside the Box element */
   children?: React.ReactNode
   /** Specifies the direction of the child items */
@@ -81,6 +83,7 @@ const Box = ({
   borderColor = 'transparent',
   borderStyle = 'none',
   borderWidth = 'unset',
+  className = '',
   direction = 'row',
   grow,
   height = 'unset',
@@ -108,6 +111,7 @@ const Box = ({
     borderColor: get(theme, 'root', 'colors', borderColor),
     borderStyle: borderStyle,
     borderWidth: get(theme, 'root', 'borderSizes', borderWidth),
+    className,
     directionProp: direction,
     grow,
     justifyContent,
