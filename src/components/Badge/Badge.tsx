@@ -2,7 +2,8 @@ import React from 'react'
 import { useTheme } from 'emotion-theming'
 
 import { get } from '../../utils/get'
-import { ThemeConfig, Palette } from '../../types'
+import { roundedStyles } from '../../utils/roundedStyles'
+import { ThemeConfig, Palette, Rounded } from '../../types'
 import { StyledBadge } from './style'
 
 const COLOR_BLACK = '#000000'
@@ -15,6 +16,8 @@ interface BadgeProps {
   variant?: Palette
   /** An optional icon to display */
   icon?: React.ReactNode
+  /** How round the corners are of the box */
+  rounded?: Rounded
 }
 
 /**
@@ -31,13 +34,22 @@ function chooseTextColor(bgColor = ''): string {
     : COLOR_WHITE
 }
 
-const Badge = ({ text = '', variant = 'brand' }: BadgeProps) => {
+const Badge = ({
+  text = '',
+  variant = 'brand',
+  rounded = false,
+}: BadgeProps) => {
   const theme: ThemeConfig = useTheme()
+  const roundedProps = roundedStyles(theme, rounded, 'badge')
   const backgroundColor = get(theme, 'root', 'colors', variant)
   const color = chooseTextColor(backgroundColor)
 
   return (
-    <StyledBadge backgroundColor={backgroundColor} color={color}>
+    <StyledBadge
+      backgroundColor={backgroundColor}
+      color={color}
+      rounded={roundedProps}
+    >
       {text}
     </StyledBadge>
   )

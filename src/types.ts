@@ -129,4 +129,7 @@ export interface ThemeConfig {
   box?: {
     rounded?: string
   }
+  badge?: {
+    rounded?: string
+  }
 }

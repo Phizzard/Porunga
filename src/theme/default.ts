@@ -133,7 +133,11 @@ const defaultTheme: ThemeConfig = {
     },
   },
   box: {
-    rounded: '20px',
+    rounded: '24px',
+  },
+  badge: {
+    rounded: '24px',
+  },
   },
 }
 
