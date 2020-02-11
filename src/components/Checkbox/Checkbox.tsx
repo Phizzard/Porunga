@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { useTheme } from 'emotion-theming'
 
-import { ThemeConfig } from '../../types'
+import { ThemeConfig, Rounded, Palette } from '../../types'
 import { get } from '../../utils/get'
 import { Container, Input, CustomCheckbox } from './style'
+import { roundedStyles } from '../../utils/roundedStyles'
 
 /**
  * Checkbox properties
@@ -16,8 +17,9 @@ export interface CheckboxProps {
   checked?: boolean
   disabled?: boolean
   className?: string
-  backgroundColor?: string
+  primaryColor?: Palette
   label: string
+  rounded: Rounded
 }
 
 /**
@@ -30,15 +32,17 @@ export const Checkbox = ({
   checked,
   disabled,
   className,
-  backgroundColor,
+  primaryColor = 'dark-1',
   label,
+  rounded = false,
 }: CheckboxProps) => {
   const [isChecked, setIsChecked] = useState(checked || false)
   const theme: ThemeConfig = useTheme()
-
+  const roundedProps = roundedStyles(theme, rounded, 'checkbox')
   const checkboxProps = {
-    backgroundColor: backgroundColor || get(theme, 'root', 'colors', 'brand'),
+    primaryColor: get(theme, 'root', 'colors', primaryColor),
     disabled,
+    rounded: roundedProps,
   }
 
   const handleChange = useCallback(() => {

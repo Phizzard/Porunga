@@ -133,7 +133,10 @@ const defaultTheme: ThemeConfig = {
     },
   },
   box: {
-    rounded: '20px',
+    rounded: '24px',
+  },
+  checkbox: {
+    rounded: '12px',
   },
 }
 
