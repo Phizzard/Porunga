@@ -5,6 +5,7 @@ exports[`renders correctly 1`] = `
   className="css-4su3ie"
 >
   <input
+    aria-label="test"
     checked={false}
     className="css-11c0hjf"
     onChange={[Function]}
@@ -14,5 +15,6 @@ exports[`renders correctly 1`] = `
     className="css-isrnkd"
   />
    
+  test
 </label>
 `;

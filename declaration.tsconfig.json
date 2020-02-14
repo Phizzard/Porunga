@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig",
+  "include": "src/components",
+  "exclude": ["__tests__/**/*.tsx"],
+  "compilerOptions": {
+    "declaration": true,
+    "noEmit": false,
+    "emitDeclarationOnly": true
+  }
+}

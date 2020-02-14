@@ -52,6 +52,7 @@
     "start": "styleguidist server",
     "build": "styleguidist build",
     "dist": "rollup -c",
+    "declaration": "tsc declaration.tsconfig.json",
     "prepublishOnly": "yarn && yarn test && yarn dist",
     "test": "CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
