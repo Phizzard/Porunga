@@ -132,4 +132,7 @@ export interface ThemeConfig {
   badge?: {
     rounded?: string
   }
+  checkbox?: {
+    rounded?: string
+  }
 }

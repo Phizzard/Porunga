@@ -138,6 +138,8 @@ const defaultTheme: ThemeConfig = {
   badge: {
     rounded: '24px',
   },
+  checkbox: {
+    rounded: '12px',
   },
 }
 

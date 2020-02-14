@@ -11,7 +11,7 @@ import { ThemeConfig, Rounded } from '../types'
 export function roundedStyles(
   theme: ThemeConfig,
   rounded: Rounded,
-  componentKey: 'box' | 'badge'
+  componentKey: 'box' | 'checkbox' | 'badge'
 ): SerializedStyles {
   if (typeof rounded === 'object') {
     return css(`

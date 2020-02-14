@@ -1,16 +1,15 @@
 import styled from '@emotion/styled'
-import { css } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/core'
 
 interface CheckboxProps {
-  id?: string
-  name?: string
-  backgroundColor?: string
+  primaryColor?: string
   disabled?: boolean
 }
 
 interface CustomCheckboxProps {
-  backgroundColor?: string
+  primaryColor?: string
   isChecked: boolean
+  rounded?: SerializedStyles
 }
 
 export const Container = styled.label<CheckboxProps>`
@@ -26,7 +25,7 @@ export const Container = styled.label<CheckboxProps>`
   :focus-within {
     > div {
       background-color: #fff;
-      color: ${p => p.backgroundColor};
+      color: ${p => p.primaryColor};
     }
   }
 
@@ -57,7 +56,7 @@ export const Input = styled.input<CheckboxProps>`
 
   :focus + div {
     background-color: #fff;
-    color: ${p => p.backgroundColor};
+    color: ${p => p.primaryColor};
   }
 `
 
@@ -65,15 +64,15 @@ export const CustomCheckbox = styled.div<CustomCheckboxProps>`
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  border: solid 2px ${p => p.backgroundColor};
+  border: solid 2px ${p => p.primaryColor};
   background-color: #fff;
-  color: ${p => p.backgroundColor};
+  color: ${p => p.primaryColor};
   margin: -3px 5px 0 0;
   padding: 0;
   font-size: 1.1rem;
   width: 20px;
   height: 20px;
-  border-radius: 5px;
+  ${p => p.rounded};
 
   &:after {
     content: 'L';
