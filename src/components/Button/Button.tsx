@@ -15,6 +15,7 @@ export interface ButtonProps {
   disabled?: boolean
   className?: string
   primaryColor?: Palette
+  secondaryColor?: Palette
   isOutline?: boolean
   rounded?: Rounded
   label: string
@@ -28,6 +29,7 @@ export const Button = ({
   disabled,
   className,
   primaryColor = 'dark-4',
+  secondaryColor = 'light-1',
   isOutline = false,
   label,
   rounded = false,
@@ -41,6 +43,7 @@ export const Button = ({
     rounded: roundedProps,
     isOutline,
     primaryColor: get(theme, 'root', 'colors', primaryColor),
+    secondaryColor: get(theme, 'root', 'colors', secondaryColor),
   }
 
   return (
