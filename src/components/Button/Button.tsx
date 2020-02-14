@@ -1,7 +1,8 @@
 import React from 'react'
 import { useTheme } from 'emotion-theming'
 
-import { ThemeConfig } from '../../types'
+import { ThemeConfig, Rounded, Palette } from '../../types'
+import { roundedStyles } from '../../utils/roundedStyles'
 import { get } from '../../utils/get'
 import { Container } from './style'
 
@@ -13,7 +14,10 @@ export interface ButtonProps {
   onClick?(): any
   disabled?: boolean
   className?: string
-  backgroundColor?: string
+  primaryColor?: Palette
+  secondaryColor?: Palette
+  isOutline?: boolean
+  rounded?: Rounded
   label: string
 }
 
@@ -24,16 +28,22 @@ export const Button = ({
   onClick,
   disabled,
   className,
-  backgroundColor,
+  primaryColor = 'dark-4',
+  secondaryColor = 'light-1',
+  isOutline = false,
   label,
+  rounded = false,
 }: ButtonProps) => {
   const theme: ThemeConfig = useTheme()
-
+  const roundedProps = roundedStyles(theme, rounded, 'button')
   const buttonProps = {
     onClick,
     disabled,
     className,
-    backgroundColor: backgroundColor || get(theme, 'root', 'colors', 'brand'),
+    rounded: roundedProps,
+    isOutline,
+    primaryColor: get(theme, 'root', 'colors', primaryColor),
+    secondaryColor: get(theme, 'root', 'colors', secondaryColor),
   }
 
   return (

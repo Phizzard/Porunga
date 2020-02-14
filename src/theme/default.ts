@@ -135,6 +135,9 @@ const defaultTheme: ThemeConfig = {
   box: {
     rounded: '24px',
   },
+  button: {
+    rounded: '24px',
+  },
   badge: {
     rounded: '24px',
   },
