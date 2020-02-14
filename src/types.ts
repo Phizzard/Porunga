@@ -129,6 +129,9 @@ export interface ThemeConfig {
   box?: {
     rounded?: string
   }
+  badge?: {
+    rounded?: string
+  }
   checkbox?: {
     rounded?: string
   }
