@@ -1,7 +1,12 @@
 {
   "extends": "./tsconfig",
-  "include": "src/components",
-  "exclude": ["__tests__/**/*.tsx"],
+  "include": ["src/components"],
+  "exclude": [
+    "src/utils/**/*",
+    "src/theme/**/*",
+    "src/components/**/__tests__/**/*",
+    "src/components/**/style.*"
+  ],
   "compilerOptions": {
     "declaration": true,
     "noEmit": false,

@@ -19,7 +19,7 @@ export interface CheckboxProps {
   className?: string
   primaryColor?: Palette
   label: string
-  rounded: Rounded
+  rounded?: Rounded
 }
 
 /**
