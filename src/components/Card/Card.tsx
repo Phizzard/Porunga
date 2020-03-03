@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from '@emotion/styled'
 
 import { Container } from './style'
 import { get } from '../../utils/get'
@@ -8,7 +9,7 @@ import Heading from '../Heading'
 
 type CardProps = {
   /** Content inside Card's content section */
-  children: React.ReactNode
+  children?: React.ReactNode
   /** Small muted text under card content */
   footerText?: string
   /** An object of image data that will render on top of the card */
@@ -58,8 +59,7 @@ const Card = ({
           justifyContent="center"
           alignItems="center"
         >
-          <img
-            style={{ height: '320px', width: '320px' }}
+          <HeroImage
             alt={heroImage.alt}
             src={heroImage.src}
             srcSet={heroImage.srcSet}
@@ -89,5 +89,10 @@ const Card = ({
     </Container>
   )
 }
+
+const HeroImage = styled.img`
+  width: 100%;
+  height: 100%;
+`
 
 export default Card
