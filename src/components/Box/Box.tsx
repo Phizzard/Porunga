@@ -30,6 +30,8 @@ export type BoxProps = {
   alignSelf?: 'flex-start' | 'center' | 'flex-end' | 'baseline' | 'stretch'
   /** The DOM tag or react component to use for the element. */
   as?: string | Function
+  /** A fixed or relative size along its container's main axis. */
+  basis?: Sizes
   /** A backgroundColor identifier */
   backgroundColor?: Palette
   /** A borderColor identifier */
@@ -79,6 +81,7 @@ const Box = ({
   alignContent = 'stretch',
   alignItems = 'stretch',
   alignSelf = 'baseline',
+  basis = 'unset',
   backgroundColor = 'transparent',
   borderColor = 'transparent',
   borderStyle = 'none',
@@ -108,6 +111,7 @@ const Box = ({
     alignSelf,
     as,
     backgroundColor: get(theme, 'root', 'colors', backgroundColor),
+    basisProp: get(theme, 'root', 'sizes', basis),
     borderColor: get(theme, 'root', 'colors', borderColor),
     borderStyle: borderStyle,
     borderWidth: get(theme, 'root', 'borderSizes', borderWidth),
