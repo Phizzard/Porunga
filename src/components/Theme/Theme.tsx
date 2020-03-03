@@ -6,7 +6,7 @@ import _merge from 'lodash.merge'
 
 interface ThemeProps {
   /** Custom theme config object */
-  theme: ThemeConfig
+  theme?: ThemeConfig
   /** Content inside the Theme Wrapper */
   children: React.ReactNode
 }
