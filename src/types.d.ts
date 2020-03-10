@@ -1,4 +1,4 @@
-export type Palette =
+export declare type Palette =
   | 'brand'
   | 'accent-1'
   | 'accent-2'
@@ -26,8 +26,7 @@ export type Palette =
   | 'dark-5'
   | 'dark-6'
   | 'transparent'
-
-export type Sizes =
+export declare type Sizes =
   | 'xxsmall'
   | 'xsmall'
   | 'small'
@@ -35,17 +34,9 @@ export type Sizes =
   | 'large'
   | 'xlarge'
   | 'xxlarge'
-  | '1/2'
-  | '1/3'
-  | '2/3'
-  | '1/4'
-  | '2/4'
-  | '3/4'
   | 'full'
-  | 'auto'
   | 'unset'
-
-export type Weight =
+export declare type Weight =
   | 'normal'
   | 'bold'
   | 'bolder'
@@ -61,28 +52,32 @@ export type Weight =
   | 'inherit'
   | 'initial'
   | 'unset'
-
-export type Style =
+export declare type Style =
   | 'normal'
   | 'italic'
   | 'oblique'
   | 'inherit'
   | 'initial'
   | 'unset'
-
-export type Rounded = boolean | DirectionsBoolean
-
-export type DirectionsBoolean = {
+export declare type Rounded = boolean | DirectionsBoolean
+export declare type DirectionsBoolean = {
   tl?: boolean
   tr?: boolean
   br?: boolean
   bl?: boolean
 }
-export type DirectionsSizes = { t?: Sizes; l?: Sizes; r?: Sizes; b?: Sizes }
-
-export type FlexDirection = 'row' | 'row-reverse' | 'column' | 'column-reverse'
-
-export type BorderStyles =
+export declare type DirectionsSizes = {
+  t?: Sizes
+  l?: Sizes
+  r?: Sizes
+  b?: Sizes
+}
+export declare type FlexDirection =
+  | 'row'
+  | 'row-reverse'
+  | 'column'
+  | 'column-reverse'
+export declare type BorderStyles =
   | 'none'
   | 'solid'
   | 'dashed'
@@ -93,7 +88,6 @@ export type BorderStyles =
   | 'inset'
   | 'outset'
   | 'hidden'
-
 export interface ThemeConfig {
   root?: {
     colors?: {

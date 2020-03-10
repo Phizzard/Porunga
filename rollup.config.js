@@ -4,7 +4,7 @@ import pkg from './package.json'
 
 export default [
   {
-    input: 'src/components/index.ts',
+    input: 'src/index.ts',
     external: Object.keys(pkg.peerDependencies || {}),
     plugins: [
       typescript({

@@ -8,6 +8,7 @@ export type StyledBoxProps = {
   alignItems?: string
   alignSelf?: string
   backgroundColor?: string
+  basis?: string
   borderWidth?: string
   borderColor?: string
   borderStyle?: string
@@ -28,6 +29,7 @@ export const Container = styled.div<StyledBoxProps>`
   box-sizing: border-box;
   padding-inline-start: 0;
   display: flex;
+  flex-basis: ${p => p.basis};
   flex-direction: ${p => p.directionProp};
   flex-grow: ${p => p.grow};
   flex-shrink: ${p => p.shrink};

@@ -1,21 +1,13 @@
 import React from 'react'
-import { useTheme } from 'emotion-theming'
-import { roundedStyles } from '../../utils/roundedStyles'
-
 import {
   Sizes,
   FlexDirection,
   Palette,
   BorderStyles,
   Rounded,
-  ThemeConfig,
   DirectionsSizes,
 } from '../../types'
-import { get } from '../../utils/get'
-import { Container } from './style'
-import { spacingStyles } from '../../utils/spacingStyles'
-
-export type BoxProps = {
+export declare type BoxProps = {
   /** How to align the contents along the cross axis. */
   alignItems?: 'flex-start' | 'center' | 'flex-end' | 'baseline' | 'stretch'
   /** How to align the contents when there is extra space in the cross axis. */
@@ -30,8 +22,6 @@ export type BoxProps = {
   alignSelf?: 'flex-start' | 'center' | 'flex-end' | 'baseline' | 'stretch'
   /** The DOM tag or react component to use for the element. */
   as?: string | Function
-  /** A fixed or relative size along its container's main axis. */
-  basis?: Sizes
   /** A backgroundColor identifier */
   backgroundColor?: Palette
   /** A borderColor identifier */
@@ -74,62 +64,27 @@ export type BoxProps = {
   /** The fixed width */
   width?: Sizes
 }
-
-const Box = ({
+declare const Box: ({
   children,
-  as = '',
-  alignContent = 'stretch',
-  alignItems = 'stretch',
-  alignSelf = 'baseline',
-  basis = 'unset',
-  backgroundColor = 'transparent',
-  borderColor = 'transparent',
-  borderStyle = 'none',
-  borderWidth = 'unset',
-  className = '',
-  direction = 'row',
+  as,
+  alignContent,
+  alignItems,
+  alignSelf,
+  backgroundColor,
+  borderColor,
+  borderStyle,
+  borderWidth,
+  className,
+  direction,
   grow,
-  height = 'unset',
-  justifyContent = 'stretch',
-  padding = 'unset',
-  rounded = false,
-  shadow = 'unset',
+  height,
+  justifyContent,
+  padding,
+  rounded,
+  shadow,
   shrink,
-  margin = 'unset',
-  wrap = 'no-wrap',
-  width = 'unset',
-}: BoxProps) => {
-  const theme: ThemeConfig = useTheme()
-
-  const roundedProps = roundedStyles(theme, rounded, 'box')
-  const paddingProps = spacingStyles(theme, padding, 'padding')
-  const marginProps = spacingStyles(theme, margin, 'margin')
-
-  const boxProps = {
-    alignContent,
-    alignItems,
-    alignSelf,
-    as,
-    backgroundColor: get(theme, 'root', 'colors', backgroundColor),
-    basisProp: get(theme, 'root', 'sizes', basis),
-    borderColor: get(theme, 'root', 'colors', borderColor),
-    borderStyle: borderStyle,
-    borderWidth: get(theme, 'root', 'borderSizes', borderWidth),
-    className,
-    directionProp: direction,
-    grow,
-    justifyContent,
-    heightProp: get(theme, 'root', 'sizes', height),
-    margin: marginProps,
-    rounded: roundedProps,
-    shadow: get(theme, 'root', 'shadows', shadow),
-    shrink,
-    padding: paddingProps,
-    wrapProp: wrap,
-    widthProp: get(theme, 'root', 'sizes', width),
-  }
-
-  return <Container {...boxProps}>{children}</Container>
-}
-
+  margin,
+  wrap,
+  width,
+}: BoxProps) => JSX.Element
 export default Box
