@@ -7,7 +7,7 @@ import { ThemeConfig, Palette, Rounded } from '../../types'
 import { StyledBadge } from './style'
 
 const COLOR_BLACK = '#000000'
-const COLOR_WHITE = '#FFFFFFF'
+const COLOR_WHITE = '#FFFFFF'
 
 interface BadgeProps {
   /** The text to display in the badge */
