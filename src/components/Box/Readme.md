@@ -30,13 +30,13 @@ Column direction Box
   borderWidth="small"
   direction="column"
 >
-  <Box padding="large" backgroundColor="light-5">
+  <Box padding="large" margin="small" backgroundColor="light-5">
     box
   </Box>
-  <Box padding="large" backgroundColor="light-5">
+  <Box padding="large" margin="small" backgroundColor="light-5">
     box
   </Box>
-  <Box padding="large" backgroundColor="light-5">
+  <Box padding="large" margin="small" backgroundColor="light-5">
     box
   </Box>
 </Box>
@@ -52,25 +52,25 @@ Wrap Box
   borderWidth="small"
   wrap="wrap"
 >
-  <Box padding="large" backgroundColor="light-5">
+  <Box padding="xxlarge" margin="small" backgroundColor="light-5">
     box
   </Box>
-  <Box padding="large" backgroundColor="light-5">
+  <Box padding="xxlarge" margin="small" backgroundColor="light-5">
     box
   </Box>
-  <Box padding="large" backgroundColor="light-5">
+  <Box padding="xxlarge" margin="small" backgroundColor="light-5">
     box
   </Box>
-  <Box padding="large" backgroundColor="light-5">
+  <Box padding="xxlarge" margin="small" backgroundColor="light-5">
     box
   </Box>
-  <Box padding="large" backgroundColor="light-5">
+  <Box padding="xxlarge" margin="small" backgroundColor="light-5">
     box
   </Box>
-  <Box padding="large" backgroundColor="light-5">
+  <Box padding="xxlarge" margin="small" backgroundColor="light-5">
     box
   </Box>
-  <Box padding="large" backgroundColor="light-5">
+  <Box padding="xxlarge" margin="small" backgroundColor="light-5">
     box
   </Box>
 </Box>
