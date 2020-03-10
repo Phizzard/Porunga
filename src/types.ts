@@ -145,4 +145,7 @@ export interface ThemeConfig {
   checkbox?: {
     rounded?: string
   }
+  progressBar?: {
+    rounded?: string
+  }
 }

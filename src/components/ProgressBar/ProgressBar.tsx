@@ -2,7 +2,8 @@ import React from 'react'
 import { useTheme } from 'emotion-theming'
 
 import { get } from '../../utils/get'
-import { ThemeConfig, Palette } from '../../types'
+import { roundedStyles } from '../../utils/roundedStyles'
+import { ThemeConfig, Palette, Rounded } from '../../types'
 import { Container, StyledProgressBar } from './style'
 
 /**
@@ -20,7 +21,7 @@ interface ProgressBarProps {
   /** Sets text color */
   textColor?: string
   /** Optionally round the progress bar */
-  rounded?: boolean
+  rounded?: Rounded
   /** Optional class name */
   className?: string
 }
@@ -54,10 +55,11 @@ const ProgressBar = ({
   showValue = false,
   customText = '',
   textColor = '#FFFFFF',
-  rounded = false,
+  rounded,
   className,
 }: ProgressBarProps) => {
   const theme: ThemeConfig = useTheme()
+  const roundedProps = roundedStyles(theme, rounded, 'progressBar')
   const flatVal = flatten(value)
   const valueAsString = getStringPercent(flatVal)
   const width = { width: valueAsString }
@@ -65,6 +67,7 @@ const ProgressBar = ({
 
   const progressBarProps = {
     color: get(theme, 'root', 'colors', color),
+    rounded: roundedProps,
     text: textToUse,
     textColor,
   }
@@ -76,7 +79,7 @@ const ProgressBar = ({
       aria-valuemax={100}
       aria-valuenow={flatVal}
       role="progressbar"
-      rounded={rounded}
+      rounded={roundedProps}
     >
       <StyledProgressBar
         style={width}

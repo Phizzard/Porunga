@@ -151,6 +151,9 @@ const defaultTheme: ThemeConfig = {
   checkbox: {
     rounded: '12px',
   },
+  progressBar: {
+    rounded: '24px',
+  },
 }
 
 export default defaultTheme
