@@ -13,6 +13,8 @@ export function roundedStyles(
   rounded: Rounded,
   componentKey: 'box' | 'checkbox' | 'badge' | 'button'
 ): SerializedStyles {
+  rounded = isRootAllRounded(theme, rounded)
+
   if (typeof rounded === 'object') {
     return css(`
     border-top-left-radius: ${
@@ -33,4 +35,12 @@ export function roundedStyles(
       border-radius: ${rounded ? get(theme, componentKey, 'rounded') : ''}
     `)
   }
+}
+
+/**
+ *
+ * @param theme
+ */
+function isRootAllRounded(theme: ThemeConfig, rounded: Rounded) {
+  return rounded === undefined ? get(theme, 'root', 'isAllRounded') : rounded
 }

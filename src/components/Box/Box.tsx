@@ -92,7 +92,7 @@ const Box = ({
   height = 'unset',
   justifyContent = 'stretch',
   padding = 'unset',
-  rounded = false,
+  rounded,
   shadow = 'unset',
   shrink,
   margin = 'unset',

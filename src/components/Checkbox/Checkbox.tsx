@@ -34,7 +34,7 @@ export const Checkbox = ({
   className,
   primaryColor = 'dark-1',
   label,
-  rounded = false,
+  rounded,
 }: CheckboxProps) => {
   const [isChecked, setIsChecked] = useState(checked || false)
   const theme: ThemeConfig = useTheme()

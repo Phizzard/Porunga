@@ -32,7 +32,7 @@ export const Button = ({
   secondaryColor = 'light-1',
   isOutline = false,
   label,
-  rounded = false,
+  rounded,
 }: ButtonProps) => {
   const theme: ThemeConfig = useTheme()
   const roundedProps = roundedStyles(theme, rounded, 'button')
