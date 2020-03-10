@@ -34,11 +34,7 @@ function chooseTextColor(bgColor = ''): string {
     : COLOR_WHITE
 }
 
-const Badge = ({
-  text = '',
-  variant = 'brand',
-  rounded = false,
-}: BadgeProps) => {
+const Badge = ({ text = '', variant = 'brand', rounded }: BadgeProps) => {
   const theme: ThemeConfig = useTheme()
   const roundedProps = roundedStyles(theme, rounded, 'badge')
   const backgroundColor = get(theme, 'root', 'colors', variant)

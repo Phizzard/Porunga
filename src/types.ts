@@ -70,7 +70,7 @@ export type Style =
   | 'initial'
   | 'unset'
 
-export type Rounded = boolean | DirectionsBoolean
+export type Rounded = undefined | boolean | DirectionsBoolean
 
 export type DirectionsBoolean = {
   tl?: boolean
@@ -111,6 +111,7 @@ export interface ThemeConfig {
     shadows?: {
       [name in Sizes]?: string
     }
+    isAllRounded?: boolean
   }
   heading?: {
     sizes?: {
