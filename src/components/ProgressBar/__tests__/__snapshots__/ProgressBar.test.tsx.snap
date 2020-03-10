@@ -5,11 +5,11 @@ exports[`ProgressBar renders correctly 1`] = `
   aria-valuemax={100}
   aria-valuemin={0}
   aria-valuenow={0}
-  className="css-qcnn85"
+  className="css-11o7438"
   role="progressbar"
 >
   <span
-    className="css-1iy5kdx"
+    className="css-d42j4p"
     style={
       Object {
         "width": "0%",

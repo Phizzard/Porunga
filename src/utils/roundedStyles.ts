@@ -11,7 +11,13 @@ import { ThemeConfig, Rounded } from '../types'
 export function roundedStyles(
   theme: ThemeConfig,
   rounded: Rounded,
-  componentKey: 'box' | 'checkbox' | 'badge' | 'button'
+  componentKey:
+    | 'box'
+    | 'checkbox'
+    | 'badge'
+    | 'button'
+    | 'progressBar'
+    | 'input'
 ): SerializedStyles {
   rounded = isRootAllRounded(theme, rounded)
 

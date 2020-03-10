@@ -1,10 +1,11 @@
 import styled from '@emotion/styled'
+import { SerializedStyles } from '@emotion/core'
 
 type ProgressBarProps = {
   color?: string
   text?: string
   textColor?: string
-  rounded?: boolean
+  rounded?: SerializedStyles
 }
 
 export const Container = styled.div<ProgressBarProps>`
@@ -13,7 +14,7 @@ export const Container = styled.div<ProgressBarProps>`
   display: block;
   max-width: 100%;
   background: rgba(0, 0, 0, 0.1);
-  ${p => p.rounded && 'border-radius: 20px;'}
+  ${p => p.rounded}
 `
 
 export const StyledProgressBar = styled.span<ProgressBarProps>`
@@ -25,7 +26,7 @@ export const StyledProgressBar = styled.span<ProgressBarProps>`
   line-height: 1;
   height: 2rem;
   transition: width .1s ease, background-color .1s ease;
-  ${p => p.rounded && 'border-radius: 20px;'}
+  ${p => p.rounded}
 
   :after {
     content: '${p => p.text}';
