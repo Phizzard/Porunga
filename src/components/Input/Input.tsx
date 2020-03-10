@@ -1,8 +1,11 @@
 import React, { useRef } from 'react'
+import { useTheme } from 'emotion-theming'
 
 import Label from './Label'
 import BottomText from './BottomText'
 import { StyledInput, Container } from './style'
+import { Rounded, ThemeConfig } from '../../types'
+import { roundedStyles } from '../../utils/roundedStyles'
 
 type InputTypes =
   | 'text'
@@ -38,6 +41,8 @@ interface InputProps {
   hideLabel?: boolean
   /** The input placeholder text */
   placeholder?: string
+  /** Optionally round the edges */
+  rounded?: Rounded
   // icon:,
   // iconPosition: ,
   /** The border color for the input when active */
@@ -56,6 +61,7 @@ interface InputProps {
   bottomText?: string
   /** Whether or not the input is required */
   required?: boolean
+
   // error:,
   /** Whether or not the input is disabled */
   disabled?: boolean
@@ -106,6 +112,7 @@ export const Input = ({
   required = false,
   disabled = false,
   readOnly = false,
+  rounded,
   tabIndex,
   onChange,
   onClick,
@@ -114,8 +121,11 @@ export const Input = ({
   onKeyDown,
   className,
 }: InputProps) => {
+  const theme: ThemeConfig = useTheme()
   const labelId = generateId()
   const inputRef = useRef()
+
+  const roundedProps = roundedStyles(theme, rounded, 'input')
 
   return (
     <Container className={className}>
@@ -150,6 +160,7 @@ export const Input = ({
         title={title}
         aria-labelledby={labelId}
         ref={inputRef.current}
+        rounded={roundedProps}
         // iconPosition={iconPosition}
         // icon={icon}
         // error={error}

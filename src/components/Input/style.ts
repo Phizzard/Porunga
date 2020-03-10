@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { SerializedStyles } from '@emotion/core'
 
 export const Container = styled.div`
   display: flex;
@@ -9,13 +10,14 @@ export const Container = styled.div`
 type InputProps = {
   borderColorActive?: string
   borderColorInactive?: string
+  rounded?: SerializedStyles
 }
 
 export const StyledInput = styled.input<InputProps>`
+    ${p => p.rounded};
     font: inherit;
     background-color: #FFFFFF;
     border: 1px solid ${p => p.borderColorInactive};
-    border-radius: 12rem;
     width: 100%;
     transition: all 0.1s linear, padding 0s, border 0s;
     display: inline-block;

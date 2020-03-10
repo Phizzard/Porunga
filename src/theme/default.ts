@@ -154,6 +154,9 @@ const defaultTheme: ThemeConfig = {
   progressBar: {
     rounded: '24px',
   },
+  input: {
+    rounded: '24px',
+  },
 }
 
 export default defaultTheme

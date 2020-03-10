@@ -17,6 +17,7 @@ export function roundedStyles(
     | 'badge'
     | 'button'
     | 'progressBar'
+    | 'input'
 ): SerializedStyles {
   if (typeof rounded === 'object') {
     return css(`

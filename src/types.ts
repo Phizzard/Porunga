@@ -148,4 +148,7 @@ export interface ThemeConfig {
   progressBar?: {
     rounded?: string
   }
+  input?: {
+    rounded?: string
+  }
 }
