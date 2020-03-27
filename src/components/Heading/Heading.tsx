@@ -19,7 +19,7 @@ export interface HeadingProps {
   /** Font size of Heading using an identitfier */
   size?: Sizes
   /** Alignment of text inside */
-  textAlign?: 'left' | 'center' | 'right'
+  textAlign?: 'left' | 'center' | 'right' | 'justify'
 }
 
 /**

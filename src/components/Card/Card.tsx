@@ -24,11 +24,14 @@ type CardProps = {
   rounded?: boolean
   /** The main title in the card content area */
   title?: string
+  /** Horizontal alignment of title */
+  titleAlign?: 'left' | 'center' | 'right' | 'justify'
 }
 const Card = ({
   children,
   heroImage,
   title,
+  titleAlign = 'left',
   rounded,
   footerText,
 }: CardProps) => {
@@ -69,7 +72,11 @@ const Card = ({
       )}
       <Box direction="column">
         <Box direction="column" padding="medium" grow={1}>
-          {title && <Heading level="h2">{title}</Heading>}
+          {title && (
+            <Heading textAlign={titleAlign} level="h2">
+              {title}
+            </Heading>
+          )}
           {children}
         </Box>
         {footerText && (
