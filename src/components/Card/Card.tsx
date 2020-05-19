@@ -1,11 +1,13 @@
 import React from 'react'
-import styled from '@emotion/styled'
+import { useTheme } from 'emotion-theming'
 
-import { Container } from './style'
+import { Container, HeroImage } from './style'
 import { get } from '../../utils/get'
+import { roundedStyles } from '../../utils/roundedStyles'
 import Box from '../Box'
 import Text from '../Text'
 import Heading from '../Heading'
+import { ThemeConfig } from '../../types'
 
 type CardProps = {
   /** Content inside Card's content section */
@@ -24,11 +26,14 @@ type CardProps = {
   rounded?: boolean
   /** The main title in the card content area */
   title?: string
+  /** Horizontal alignment of title */
+  titleAlign?: 'left' | 'center' | 'right' | 'justify'
 }
 const Card = ({
   children,
   heroImage,
   title,
+  titleAlign = 'left',
   rounded,
   footerText,
 }: CardProps) => {
@@ -41,6 +46,24 @@ const Card = ({
     right: 'row-reverse',
     left: 'row',
   }
+
+  const heroImageRoundedMap: {
+    top: { tl: true; tr: true }
+    left: false
+    right: false
+  } = {
+    top: { tl: true, tr: true },
+    left: false,
+    right: false,
+  }
+
+  const theme: ThemeConfig = useTheme()
+  const roundedImageProps = roundedStyles(
+    theme,
+    get(heroImageRoundedMap, get(heroImage, 'position') || 'top'),
+    'box'
+  )
+
   return (
     <Container
       direction={get(heroImagePositionMap, get(heroImage, 'position') || 'top')}
@@ -50,7 +73,7 @@ const Card = ({
       borderStyle="solid"
       rounded={rounded}
     >
-      {heroImage && (
+      {heroImage && heroImage.src && (
         <Box
           rounded={rounded}
           margin="auto"
@@ -60,6 +83,7 @@ const Card = ({
           alignItems="center"
         >
           <HeroImage
+            rounded={roundedImageProps}
             alt={heroImage.alt}
             src={heroImage.src}
             srcSet={heroImage.srcSet}
@@ -69,7 +93,11 @@ const Card = ({
       )}
       <Box direction="column">
         <Box direction="column" padding="medium" grow={1}>
-          {title && <Heading level="h2">{title}</Heading>}
+          {title && (
+            <Heading textAlign={titleAlign} level="h2">
+              {title}
+            </Heading>
+          )}
           {children}
         </Box>
         {footerText && (
@@ -89,10 +117,5 @@ const Card = ({
     </Container>
   )
 }
-
-const HeroImage = styled.img`
-  width: 100%;
-  height: 100%;
-`
 
 export default Card
