@@ -152,4 +152,7 @@ export interface ThemeConfig {
   input?: {
     rounded?: string
   }
+  select?: {
+    rounded?: string
+  }
 }

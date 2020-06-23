@@ -158,6 +158,9 @@ const defaultTheme: ThemeConfig = {
   input: {
     rounded: '24px',
   },
+  select: {
+    rounded: '24px',
+  },
 }
 
 export default defaultTheme
