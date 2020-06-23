@@ -6,15 +6,15 @@ With a theme in place, every component has a common language in how it retrieves
 {
   "root": {
     "colors": {
-      "brand": "#FF0000",
-      "accent-1": "#166CA5",
-      "accent-2": "",
-      "accent-3": "",
-      "accent-4": "",
-      "neutral-1": "",
-      "neutral-2": "",
-      "neutral-3": "",
-      "neutral-4": "",
+      "brand": "#E8325A",
+      "accent-1": "#216CA9",
+      "accent-2": "#916364",
+      "accent-3": "#6EB785",
+      "accent-4": "#745AAA",
+      "neutral-1": "#0a4c83",
+      "neutral-2": "#5b3132",
+      "neutral-3": "#21703a",
+      "neutral-4": "#2e1465",
       "error": "#FF4040",
       "warning": "#FFAA15",
       "success": "#00C781",
@@ -63,7 +63,14 @@ With a theme in place, every component has a common language in how it retrieves
       "large": "640px",
       "xlarge": "960px",
       "xxlarge": "1280px",
+      "1/2": "50%",
+      "1/3": "33.33%",
+      "2/3": "66.66%",
+      "1/4": "25%",
+      "2/4": "50%",
+      "3/4": "75%",
       "full": "100%",
+      "auto": "auto",
       "unset": ""
     },
     "shadows": {
@@ -73,7 +80,8 @@ With a theme in place, every component has a common language in how it retrieves
       "large": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
       "xlarge": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
       "unset": ""
-    }
+    },
+    "isAllRounded": false
   },
   "paragraph": {
     "sizes": {
@@ -133,12 +141,27 @@ With a theme in place, every component has a common language in how it retrieves
     }
   },
   "box": {
-    "rounded": "20px"
+    "rounded": "24px"
+  },
+  "button": {
+    "rounded": "24px"
+  },
+  "badge": {
+    "rounded": "24px"
+  },
+  "checkbox": {
+    "rounded": "12px"
+  },
+  "progressBar": {
+    "rounded": "24px"
+  },
+  "input": {
+    "rounded": "24px"
   }
 }
 ```
 
-Currently using CBC UI, the provided theme wrapper component must be wrapped around the root of a react app for it's styles to function as intended. A default theme is applied when no `theme` prop value is assigned.
+Currently using Porunga, the provided theme wrapper component must be wrapped around the root of a react app for it's styles to function as intended. A default theme is applied when no `theme` prop value is assigned.
 
 ```jsx
 import Theme from '../components/Theme'

@@ -15,7 +15,7 @@ Card with Hero Image
 ```jsx
 <Card
   title="Nostrud incididunt minim occaecat aliqua nostrud eu nulla magna."
-  heroImage={{ src: './building-blocks.png', alt: 'building-blocks' }}
+  heroImage={{ src: './porunga-close.png', alt: 'building-blocks' }}
   footerText="Commodo nostrud sit veniam mollit esse sunt."
 >
   Consequat enim eiusmod qui cupidatat. Do enim incididunt aute pariatur enim
@@ -31,7 +31,7 @@ Card with Hero Image
 <Card
   title="Nostrud incididunt minim occaecat aliqua nostrud eu nulla magna."
   heroImage={{
-    src: './building-blocks.png',
+    src: './porunga-close.png',
     alt: 'building-blocks',
     position: 'right',
   }}

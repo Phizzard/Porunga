@@ -1,6 +1,9 @@
 const path = require('path')
 
 module.exports = {
+  template: {
+    favicon: 'images/porunga-close-icon.png',
+  },
   assetsDir: 'images/',
   pagePerSection: false,
   styles: {
