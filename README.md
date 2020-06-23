@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="Porunga" src="./images/building-blocks.svg" width="200" />
+    <img alt="Porunga" src="./images/porunga-close.png" width="200" />
 </p>
 <h1 align="center">
   Porunga
