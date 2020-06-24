@@ -1,13 +1,13 @@
 <p align="center">
-    <img alt="CBC UI" src="./images/building-blocks.svg" width="200" />
+    <img alt="Porunga" src="./images/porunga-close.png" width="200" />
 </p>
 <h1 align="center">
-  CBC UI
+  Porunga
 </h1>
 
 ## Introduction
 
-CBC UI is an experimental library of presentational components to be used across applications using ReactJS. It is intended to work as building blocks.
+Porunga is an experimental library of presentational components to be used across applications using ReactJS. It is intended to work as building blocks.
 
 We hope to deliver an easy to use component API that can be easily extendable to fit the functional and design needs for multiple platforms and audiences.
 
