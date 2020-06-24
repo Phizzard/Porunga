@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<select
+  className="css-4xqwg4"
+  onChange={[Function]}
+>
+  <option
+    className="css-0"
+    disabled={true}
+    selected={true}
+    value=""
+  >
+    Please Select
+  </option>
+  <option
+    className="css-0"
+    value="some value"
+  >
+    a label
+  </option>
+</select>
+`;

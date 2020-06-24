@@ -18,6 +18,7 @@ export function roundedStyles(
     | 'button'
     | 'progressBar'
     | 'input'
+    | 'select'
 ): SerializedStyles {
   rounded = isRootAllRounded(theme, rounded)
 
