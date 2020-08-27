@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <select
-  className="css-4xqwg4"
+  className="css-bw2m8l"
   onChange={[Function]}
 >
   <option

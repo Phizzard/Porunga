@@ -18,6 +18,7 @@ export const Container = styled.label<CheckboxProps>`
   padding: 0.2rem 0.5rem;
   font-size: 1.1rem;
   font-weight: 500;
+  font-family: Open Sans, sans-serif;
   cursor: pointer;
   transition: 0.2s;
 

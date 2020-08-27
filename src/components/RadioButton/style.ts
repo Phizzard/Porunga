@@ -13,6 +13,7 @@ export const Container = styled.label<RadioButtonProps>`
   margin-bottom: 0.5rem;
   cursor: pointer;
   font-size: 16px;
+  font-family: Open Sans, sans-serif;
   user-select: none;
 
   /* Create a custom radio button */

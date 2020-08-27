@@ -6,13 +6,6 @@ module.exports = {
   },
   assetsDir: 'images/',
   pagePerSection: false,
-  styles: {
-    StyleGuide: {
-      '@global body': {
-        fontFamily: 'Open Sans,sans-serif',
-      },
-    },
-  },
   theme: {
     borderRadius: 10,
     color: {

@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <label
-  className="css-4su3ie"
+  className="css-dylujl"
 >
   <input
     aria-label="test"

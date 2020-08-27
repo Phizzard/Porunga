@@ -29,6 +29,7 @@ export const Container = styled.div<StyledBoxProps>`
   box-sizing: border-box;
   padding-inline-start: 0;
   display: flex;
+  font-family: Open Sans, sans-serif;
   flex-basis: ${p => p.basis};
   flex-direction: ${p => p.directionProp};
   flex-grow: ${p => p.grow};

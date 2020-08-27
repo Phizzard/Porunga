@@ -13,6 +13,7 @@ export const Container = styled.textarea<TextAreaProps>`
   transition: border 0.2s cubic-bezier(0.13, 0.47, 0.36, 1.02);
   font-size: 14px;
   padding: 0.3rem;
+  font-family: Open Sans, sans-serif;
   :focus {
     outline: none;
     border-bottom: 2px solid ${p => p.borderColor};

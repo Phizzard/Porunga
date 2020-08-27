@@ -14,6 +14,7 @@ export const Container = styled.div<ProgressBarProps>`
   display: block;
   max-width: 100%;
   background: rgba(0, 0, 0, 0.1);
+  font-family: Open Sans, sans-serif;
   ${p => p.rounded}
 `
 

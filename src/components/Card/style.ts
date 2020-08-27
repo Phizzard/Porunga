@@ -5,6 +5,7 @@ import Box from './../Box'
 
 export const Container = styled(Box)`
   position: relative;
+  font-family: Open Sans, sans-serif;
 `
 
 type HeroImageProps = {

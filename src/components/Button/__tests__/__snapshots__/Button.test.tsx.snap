@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <button
   aria-label="test"
-  className="css-1mjt4j"
+  className="css-1mwesrh"
 >
   test
 </button>

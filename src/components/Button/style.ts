@@ -13,6 +13,7 @@ export const Container = styled.button<ButtonProps>`
   padding: 0.6rem 1.1rem;
   font-size: 1.1rem;
   font-weight: 500;
+  font-family: Open Sans, sans-serif;
   border: 3px solid ${p => p.primaryColor};
   cursor: pointer;
   background-color: ${p => (p.isOutline ? p.secondaryColor : p.primaryColor)};

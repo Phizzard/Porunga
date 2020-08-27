@@ -7,6 +7,7 @@ interface HeadingProps {
 }
 
 export const Container = styled.h1<HeadingProps>`
+  font-family: Open Sans, sans-serif;
   color: ${p => p.colorProp};
   font-family: sans-serif;
   font-size: ${p => p.size};

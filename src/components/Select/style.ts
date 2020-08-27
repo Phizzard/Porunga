@@ -13,6 +13,7 @@ export const Container = styled.select<SelectProps>`
   padding: 0.2rem 0.4rem;
   font-size: 1rem;
   border-width: 0.1rem;
+  font-family: Open Sans, sans-serif;
   border-color: ${p => p.primaryColor};
   color: ${p => p.primaryColor};
   background-color: ${p => p.secondaryColor};

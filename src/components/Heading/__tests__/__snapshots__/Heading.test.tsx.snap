@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <h1
-  className="css-oq46em"
+  className="css-rp5cdp"
 >
   Heading
 </h1>
