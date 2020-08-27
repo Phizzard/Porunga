@@ -68,9 +68,6 @@ const Card = ({
     <Container
       direction={get(heroImagePositionMap, get(heroImage, 'position') || 'top')}
       shadow="large"
-      borderColor="light-4"
-      borderWidth="xxsmall"
-      borderStyle="solid"
       rounded={rounded}
     >
       {heroImage && heroImage.src && (
