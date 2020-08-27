@@ -7,11 +7,9 @@
 
 ## Introduction
 
-Porunga is an experimental library of presentational components to be used across applications using ReactJS. It is intended to work as building blocks.
+Porunga is an another ReactJS UI library!
 
 We hope to deliver an easy to use component API that can be easily extendable to fit the functional and design needs for multiple platforms and audiences.
-
-This is a 2019 innovation sprint project that can either take off to be implemented into a larger design system, influence directions and tech for future React based projects, or simply be an experimental playground for approaching a react ui library.
 
 ## Tools Used
 
@@ -92,11 +90,3 @@ This project uses [Commitizen](https://github.com/commitizen/cz-cli) to generate
 - Long description (optional)
 - Whether it produces any breaking changes
 - Whether it closes any open issues
-
-## Project Roadmap
-
-- [ ] Kickoff first meeting!
-- [ ] Brand the UI Library
-- [ ] Plan Scope of components we want to cover
-- [ ] Decide on a design to follow
-- [ ] Finalize theme stucture and naming
