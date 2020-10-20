@@ -160,6 +160,13 @@ const defaultTheme: ThemeConfig = {
   select: {
     rounded: '24px',
   },
+  spinner: {
+    sizes: {
+      small: '50px',
+      medium: '75px',
+      large: '100px',
+    },
+  },
 }
 
 export default defaultTheme
