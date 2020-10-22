@@ -7,9 +7,9 @@
 
 ## Introduction
 
-Porunga is an another ReactJS UI library!
+Porunga is yet another ReactJS UI library!
 
-We hope to deliver an easy to use component API that can be easily extendable to fit the functional and design needs for multiple platforms and audiences.
+We hope to deliver an easy-to-use component API that can be easily extendable to fit the functional and design needs for multiple platforms and audiences.
 
 ## Tools Used
 
@@ -27,7 +27,7 @@ This library uses Styleguidist as documentation and playground for developing co
 
 Must be running node version `12.6.0`
 
-install packages running
+install packages by running
 
 `yarn`
 
@@ -90,3 +90,7 @@ This project uses [Commitizen](https://github.com/commitizen/cz-cli) to generate
 - Long description (optional)
 - Whether it produces any breaking changes
 - Whether it closes any open issues
+
+## Contributing
+
+If you've noticed a bug or have a feature you'd like to suggest, please open a [GitHub Issue](https://github.com/Phizzard/Porunga/issues). If you would like to contribute to the project, feel free to fork this repo, create a new branch & open a pull request.
