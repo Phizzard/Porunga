@@ -155,4 +155,9 @@ export interface ThemeConfig {
   select?: {
     rounded?: string
   }
+  spinner?: {
+    sizes?: {
+      [name in Sizes]?: string
+    }
+  }
 }
