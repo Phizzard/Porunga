@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { SyntheticEvent } from 'react'
 import { useTheme } from 'emotion-theming'
 
 import { Palette, ThemeConfig } from '../../types'
@@ -29,6 +29,8 @@ export interface RadioButtonProps {
   name: string
   /** A value identifier */
   value: string
+  /** Event handler for onClick action */
+  onClick?: (event: SyntheticEvent) => void
 }
 
 /**
@@ -44,6 +46,7 @@ export const RadioButton = ({
   disabled,
   label,
   name,
+  onClick,
   value,
 }: RadioButtonProps) => {
   const theme: ThemeConfig = useTheme()
@@ -63,6 +66,7 @@ export const RadioButton = ({
         name={name}
         type="radio"
         value={value}
+        onClick={onClick}
         {...radioButtonProps}
       />
       <span className="checkmark"></span>
