@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <span
+    className="css-1x4lckw"
+  >
+    KB
+  </span>
+</div>
+`;
