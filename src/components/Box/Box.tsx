@@ -40,8 +40,6 @@ export type BoxProps = {
   borderStyle?: BorderStyles
   /** A size identifier */
   borderWidth?: Sizes
-  /** A class */
-  className?: string
   /** Content inside the Box element */
   children?: React.ReactNode
   /** Specifies the direction of the child items */
@@ -73,6 +71,8 @@ export type BoxProps = {
   wrap?: 'wrap' | 'wrap-reverse' | 'no-wrap'
   /** The fixed width */
   width?: Sizes
+  /** Any extra properties to pass to the Box */
+  props?: any
 }
 
 const Box = ({
@@ -86,7 +86,6 @@ const Box = ({
   borderColor = 'transparent',
   borderStyle = 'none',
   borderWidth = 'unset',
-  className = '',
   direction = 'row',
   grow,
   height = 'unset',
@@ -98,6 +97,7 @@ const Box = ({
   margin = 'unset',
   wrap = 'no-wrap',
   width = 'unset',
+  ...props
 }: BoxProps) => {
   const theme: ThemeConfig = useTheme()
 
@@ -115,7 +115,6 @@ const Box = ({
     borderColor: get(theme, 'root', 'colors', borderColor),
     borderStyle: borderStyle,
     borderWidth: get(theme, 'root', 'borderSizes', borderWidth),
-    className,
     directionProp: direction,
     grow,
     justifyContent,
@@ -127,6 +126,7 @@ const Box = ({
     padding: paddingProps,
     wrapProp: wrap,
     widthProp: get(theme, 'root', 'sizes', width),
+    ...props,
   }
 
   return <Container {...boxProps}>{children}</Container>
