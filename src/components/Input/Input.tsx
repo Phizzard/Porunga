@@ -23,9 +23,6 @@ type InputTypes =
   | 'tel'
   | 'color'
 
-/**
- * Input properties
- */
 interface InputProps {
   /** The id for the input (can't enforce they send this, so generate a random one by default) */
   id?: string
@@ -43,8 +40,6 @@ interface InputProps {
   placeholder?: string
   /** Optionally round the edges */
   rounded?: Rounded
-  // icon:,
-  // iconPosition: ,
   /** The border color for the input when active */
   borderColorActive?: string
   /** The border color for the input when inactive */
@@ -61,8 +56,6 @@ interface InputProps {
   bottomText?: string
   /** Whether or not the input is required */
   required?: boolean
-
-  // error:,
   /** Whether or not the input is disabled */
   disabled?: boolean
   /** Whether or not the input is read only */
@@ -79,8 +72,14 @@ interface InputProps {
   onBlur?: () => {}
   /** A callback function for the on click event */
   onKeyDown?: () => {}
-  /** Additional class name */
-  className?: string
+  /** Any extra properties to pass to the container */
+  containerProps?: any
+  /** Any extra properties to pass to the label */
+  labelProps?: any
+  /** Any extra properties to pass to the bottom text */
+  bottomTextProps?: any
+  /** Any extra properties to pass to the input */
+  props?: any
 }
 
 function generateId() {
@@ -91,9 +90,6 @@ function generateId() {
   )
 }
 
-/**
- * Input
- */
 export const Input = ({
   id = generateId(),
   value = '',
@@ -113,13 +109,16 @@ export const Input = ({
   disabled = false,
   readOnly = false,
   rounded,
-  tabIndex,
+  tabIndex = '0',
   onChange,
   onClick,
   onFocus,
   onBlur,
   onKeyDown,
-  className,
+  containerProps,
+  labelProps,
+  bottomTextProps,
+  ...props
 }: InputProps) => {
   const theme: ThemeConfig = useTheme()
   const labelId = generateId()
@@ -128,13 +127,14 @@ export const Input = ({
   const roundedProps = roundedStyles(theme, rounded, 'input')
 
   return (
-    <Container className={className}>
+    <Container {...containerProps}>
       <Label
         id={labelId}
         label={label}
         hideLabel={hideLabel}
         required={required}
         inputId={id}
+        {...labelProps}
       />
 
       <StyledInput
@@ -161,13 +161,12 @@ export const Input = ({
         aria-labelledby={labelId}
         ref={inputRef.current}
         rounded={roundedProps}
-        // iconPosition={iconPosition}
-        // icon={icon}
-        // error={error}
+        {...props}
       />
 
-      {!!bottomText && <BottomText>{bottomText}</BottomText>}
-      {/* {!!error && <ErrorText>{error}</ErrorText>} */}
+      {!!bottomText && (
+        <BottomText {...bottomTextProps}>{bottomText}</BottomText>
+      )}
     </Container>
   )
 }
