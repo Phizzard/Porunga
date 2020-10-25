@@ -160,4 +160,9 @@ export interface ThemeConfig {
       [name in Sizes]?: string
     }
   }
+  avatar?: {
+    sizes?: {
+      [name in Sizes]?: string
+    }
+  }
 }

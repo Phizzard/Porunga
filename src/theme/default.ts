@@ -167,6 +167,17 @@ const defaultTheme: ThemeConfig = {
       large: '100px',
     },
   },
+  avatar: {
+    sizes: {
+      xxsmall: '10px',
+      xsmall: '25px',
+      small: '50px',
+      medium: '75px',
+      large: '100px',
+      xlarge: '150px',
+      xxlarge: '200px',
+    },
+  },
 }
 
 export default defaultTheme
